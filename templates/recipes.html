@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/style/style.css" type="text/css" />
+    
+    <title>Document</title>
+</head>
+    {% for recipe in recipes %}
+        <h3>{{recipe.title}}</h3>
+        <p>{{recipe.description}}</p>
+        {{recipe.ingredients}}
+        {{recipe.preparation_time}}
+        {{recipe.cooking_time}}
+        {{recipe.cooking_instructions}}
+        {{recipe.vegan_friendly}}
+        {{recipe.gluten_free}}
+        <span>Rating: {{recipe.rating}}</span>
+        <span>Difficulty: {{recipe.difficulty}}</span>
+    {% endfor %}
+
+
+<body>
+    
+</body>
+</html>
