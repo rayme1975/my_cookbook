@@ -1,13 +1,126 @@
 p {
-  text-indent: 50px;
-  text-align: justify;
+  text-align: center;
   letter-spacing: 3px;
+  display: inline-block;
+  
 }
 
-h3 {
-  text-align: center;
-  font-family: "Chiller", Times, serif;
-  font-size: 48px;
-  text-transform: uppercase;
+.desc {
+  padding-top: 20px;
+}
+
+.prep {
+  padding-top: 5px;
+}
+
+
+
+
+
+
+  
+span {
+ 
+  font-family: "Ek Mukta",Helvetica,Arial,Sans-serif;
+  color: #2e9fb3;
+  font-size: 1.625rem;
+}
+
+.cookingInfo {
+  font-weight: 700;
+  
+}
+
+.navbar-fixed-bottom,
+.navbar-fixed-top {
+    position: relative;
+}
+
+.menuInfo{
+  background-color: #FFF4EC;
+}
+
+.photo_credit {
+  margin-top: 10px;
+  
+}
+
+li a:hover{
   color: #4CAF50;
+}
+
+  
+
+
+#image_id {
+ 
+  background-image: url("static/images/lukas-blazek-261682-unsplash.jpg");
+  z-index: -1;
+}
+
+
+
+.delete {
+  font-size: 20px;
+  
+}
+
+  
+.myMenuItems-banner {
+  font-family: "Roboto", Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #428bca;
+}
+
+.myMenuItems {
+  font-family: "Ek Mukta", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Ek Mukta", Times, serif;
+  font-size: 35px;
+  text-transform: capitalize;
+  color: #4CAF50;
+  
+  }
+  
+h1 a{
+  color: #4CAF50;
+}
+  
+h1 a:hover {
+  text-decoration: none;
+  color: #ACAF50;
+  
+}
+
+h3 a{
+  font-family: "Ek Mukta", Times, serif;
+  color: #4CAF50;
+  font-size: 48px;
+}
+
+h3 a:hover{
+  text-decoration: none;
+  color: #ACAF50;
+}
+
+
+hr {
+  width: 50%;
+  height: 1px;
+}
+
+div {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+ul li {
+  list-style-type: none;
 }
