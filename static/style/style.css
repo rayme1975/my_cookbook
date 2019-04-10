@@ -11,20 +11,12 @@ p {
 
 .prep {
   padding-top: 5px;
-}
-
-
-
-
-
-
-  
-span {
- 
+  display: inline-block;
   font-family: "Ek Mukta",Helvetica,Arial,Sans-serif;
   color: #2e9fb3;
   font-size: 1.625rem;
 }
+
 
 .cookingInfo {
   font-weight: 700;
