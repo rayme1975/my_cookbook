@@ -1,28 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="static/style/style.css" type="text/css" />
+{% extends 'base.html' %}
+
+    {% block content %}
     
-    <title>Document</title>
-</head>
-    {% for recipe in recipes %}
-        <h3>{{recipe.title}}</h3>
-        <p>{{recipe.description}}</p>
-        {{recipe.ingredients}}
-        {{recipe.preparation_time}}
-        {{recipe.cooking_time}}
-        {{recipe.cooking_instructions}}
-        {{recipe.vegan_friendly}}
-        {{recipe.gluten_free}}
-        <span>Rating: {{recipe.rating}}</span>
-        <span>Difficulty: {{recipe.difficulty}}</span>
-    {% endfor %}
+   
+    
+<div class="container">
+<div class="menuInfo">
+    
+    
+    
+<div class="row" >
+    <div class="col-sm-6 ">
+        <h3><a href="#">{{recipe.title}}</a></h3>
+        <p > {{recipe.description}}</p>
+     </div>   
+    <hr>
+    
+    <div class="col-sm-3 col-xs-6">
+            <p class="cookingInfo">Rating:</p><span>{{recipe.rating}}</span>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <p class="cookingInfo">Difficulty:</p><span>{{recipe.difficulty}}</span>
+        </div>
+        
+        <div class="col-sm-3 col-xs-6">
+            <p class="cookingInfo">Prep time:</p><span>{{recipe.preparation_time}}</span>
+            
+            
+        </div>
+        <div class="col-sm-3 col-xs-6">
+            <p class="cookingInfo">Cooking time:</p><span>{{recipe.cooking_time}}</span>
+            
+        </div>
+       
+    
+</div>
+        
+    <div class="row">
+        
+        <div class="col-sm-6">
+    
+    </div>
+    <div class="col-sm-3 col-xs-6">
+            <p class="cookingInfo">Vegan Friendly:</p><span>{{recipe.vegan_friendly}}</span>
+        </div>
+        
+        <div class="col-sm-3 col-xs-6">
+             <p class="cookingInfo">Gluten Free:</p><span>{{recipe.gluten_free}}</span>
+        </div>
+    
+    </div>
+</div>
+    
+        
+<hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Ingredients</h1>
+            <hr>
+            <p>{{recipe.ingredients}}</p>
+        </div>
+        <div class="col-sm-6">
+            <h1>cooking instructions</h1>
+            <hr>
+            <p>{{recipe.cooking_instructions}}</p>
+        </div>
+                
+        <hr>
+    </div> 
+    
+</div>
 
 
-<body>
-    
-</body>
-</html>
+
+        
+
+{% endblock %}
