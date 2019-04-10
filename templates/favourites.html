@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+   <h1>Favourites</h1>
+
+    {% for favourite in favourites %}
+    
+    
+    
+<div class="row">
+    <div class="col-sm-3">
+        <h1><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}"</a>{{favourite.title}}</h1>
+     </div>  
+     
+    <div class="col-sm-3 prep">
+            
+            <p class="">Prep time:</p><span>{{favourite.preparation_time}}</span>
+            <p class="">Cooking time:</p><span>{{favourite.cooking_time}}</span>
+        </div>
+     <div class="col-sm-4">
+    <p class="desc">{{favourite.description}}</p>
+    </div> 
+    
+    <div class="col-sm-2">
+    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit "></i></a>
+    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt "></i></a>
+    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="far fa-star"></i></a>
+    </div> 
+    
+    
+    
+</div>
+        
+{% endfor %}
+{% endblock%}
