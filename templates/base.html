@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     
     <!-- local stylesheet -->
-    <link rel="stylesheet" href="static/style/style.css" type="text/css" />
+    <link rel="stylesheet" href="/static/style/style.css" type="text/css" />
     
     
     
@@ -45,7 +45,7 @@
           <ul class="dropdown-menu myMenuItems">
             {% for cat in categories %}
             
-            <li><a href="list_recipes({{cat.category_name}})">{{cat.category_name}}</a></li>
+            <li><a href="list_recipes">{{cat.category_name}}</a></li>
             
             {% endfor %}
             
