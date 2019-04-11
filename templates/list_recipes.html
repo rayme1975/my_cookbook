@@ -2,6 +2,8 @@
 
     {% block content %}
     
+    <button onclick="goBack()">Go Back</button>
+    
     <h1>Recipes</h1>
     
     {% for recipe in recipes %}
@@ -9,23 +11,26 @@
     
     
 <div class="row">
-    <div class="col-sm-3">
+    <div class="col-md-3">
         <h1><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}"</a>{{recipe.title}}</h1>
      </div>  
      
-    <div class="col-sm-3 prep">
+    <div class="col-md-3 prep">
             
-            <p class="">Prep time:</p><span>{{recipe.preparation_time}}</span>
-            <p class="">Cooking time:</p><span>{{recipe.cooking_time}}</span>
+            <p class="prep">Prep time:{{recipe.preparation_time}}</p>
+            <p class="prep">Cooking time:{{recipe.cooking_time}}</p>
         </div>
-     <div class="col-sm-4">
+     <div class="col-md-4">
     <p class="desc">{{recipe.description}}</p>
     </div> 
     
-    <div class="col-sm-2">
-    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit "></i></a>
-    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt "></i></a>
-    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="far fa-star"></i></a>
+    <div class="col-md-2">
+    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit select-edit "></i></a>
+    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt select-delete  "></i></a>
+    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Favourite"><i  class="far fa-star checked"></i></a>
+    
+    
+    
     </div> 
     
     
