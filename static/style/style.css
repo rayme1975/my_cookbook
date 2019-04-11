@@ -23,6 +23,7 @@ p {
   
 }
 
+
 .navbar-fixed-bottom,
 .navbar-fixed-top {
     position: relative;
@@ -32,13 +33,25 @@ p {
   background-color: #FFF4EC;
 }
 
-.photo_credit {
-  margin-top: 10px;
-  
-}
 
 li a:hover{
   color: #4CAF50;
+}
+
+.favourite{
+  color: orange;
+}
+
+.checked:hover{
+  color: orange;
+}
+
+.select-delete:hover{
+  color: red;
+}
+
+.select-edit:hover{
+  color: blue;
 }
 
   
@@ -52,7 +65,7 @@ li a:hover{
 
 
 
-.delete {
+.icon-size {
   font-size: 20px;
   
 }
