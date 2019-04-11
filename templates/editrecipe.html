@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<button onclick="goBack()">Go Back</button>
+
 <h3>Edit Recipe</h3>
 
 <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST">
@@ -81,14 +83,14 @@
   </div>
   
   <div class="form-check">
-      {% if recipe.add_favourite %}
-          <input type="checkbox" class="form-check-input" id="add_favourite" name="add_favourite" checked>
-          {% else %}
-          <input type="checkbox" class="form-check-input" id="add_favourite" name="add_favourite">
-          {% endif %}
-    <label class="form-check-label" for="exampleCheck1">Add Favourite</label>
-  </div>
-  
+        {% if recipe.add_favourite %}
+            <input type="checkbox" class="slider" id="add_favourite" name="add_favourite" checked>
+            {% else %}
+             <input type="checkbox" class="slider" id="add_favourite" name="add_favourite">
+             {% endif %}
+            <label class="form-check-label" for="exampleCheck1">Add to Favourites</label>
+          
+      </div>
   
   <div>
       <button type="submit" class="btn btn-primary">Submit</button>
