@@ -3,6 +3,8 @@
     {% block content %}
 
    <h1>Favourites</h1>
+   
+   <button onclick="goBack()">Go Back</button>
 
     {% for favourite in favourites %}
     
@@ -15,17 +17,17 @@
      
     <div class="col-sm-3 prep">
             
-            <p class="">Prep time:</p><span>{{favourite.preparation_time}}</span>
-            <p class="">Cooking time:</p><span>{{favourite.cooking_time}}</span>
+            <p class="">Prep time:</p>{{favourite.preparation_time}}</p>
+            <p class="">Cooking time:{{favourite.cooking_time}}</p>
         </div>
      <div class="col-sm-4">
     <p class="desc">{{favourite.description}}</p>
     </div> 
     
     <div class="col-sm-2">
-    <a href="{{url_for('edit_recipe', recipe_id=favourite._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit "></i></a>
-    <a href="{{url_for('delete_recipe', recipe_id=favourite._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt "></i></a>
-    <a href="{{url_for('delete_recipe', recipe_id=favourite._id)}}" class="desc delete" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="far fa-star"></i></a>
+    <a href="{{url_for('edit_recipe', recipe_id=favourite._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit select-edit "></i></a>
+    <a href="{{url_for('delete_recipe', recipe_id=favourite._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt select-delete  "></i></a>
+    <a href="{{url_for('delete_recipe', recipe_id=favourite._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Favourite"><i  class="far fa-star favourite"></i></a>
     </div> 
     
     

@@ -6,6 +6,7 @@ from bson.objectid import ObjectId
 
 
 
+
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'my_cookbook'
@@ -25,6 +26,14 @@ def home_page():
 def list_recipes():
     
     return render_template('list_recipes.html', recipes = mongo.db.recipes.find(), categories = mongo.db.categories.find())
+    
+    
+#show choosen  category
+@app.route('/list_categories/<category_id>')
+def list_categories(category_id):
+    
+    the_category = mongo.db.recipes.find({"category_name": ObjectId(category_id)})
+    return render_template('categories.html', category = the_category, recipes = mongo.db.recipes.find(), categories = mongo.db.categories.find())
 
 
 #show an individual recipe
@@ -97,12 +106,7 @@ def update_recipe(recipe_id):
     return redirect(url_for('list_recipes'))
     
     
-    
-    
 
-
-    
-    
 if __name__ == '__main__':
     
     app.run(host=os.environ.get('IP'),port=int(os.environ.get('PORT')),
