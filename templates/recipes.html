@@ -2,74 +2,85 @@
 
     {% block content %}
     
-   <button onclick="goBack()">Go Back</button>
+   
+    
+
+
     
 <div class="container">
-<div class="menuInfo">
-    
-    
-    
-<div class="row" >
-    <div class="col-sm-6 ">
-        <h3><a href="#">{{recipe.title}}</a></h3>
-        <p > {{recipe.description}}</p>
-     </div>   
-    <hr>
-    
-    <div class="col-sm-3 col-xs-6">
-            <p class="cookingInfo">Rating:</p><span>{{recipe.rating}}</span>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-            <p class="cookingInfo">Difficulty:</p><span>{{recipe.difficulty}}</span>
-        </div>
-        
-        <div class="col-sm-3 col-xs-6">
-            <p class="cookingInfo">Prep time:</p><span>{{recipe.preparation_time}}</span>
-            
-            
-        </div>
-        <div class="col-sm-3 col-xs-6">
-            <p class="cookingInfo">Cooking time:</p><span>{{recipe.cooking_time}}</span>
-            
-        </div>
-       
-    
-</div>
-        
     <div class="row">
-        
-        <div class="col-sm-6">
-    
-    </div>
-    <div class="col-sm-3 col-xs-6">
-            <p class="cookingInfo">Vegan Friendly:</p><span>{{recipe.vegan_friendly}}</span>
+        <div class="col-md-6">
+            <h3><a href="#">{{recipe.title}}</a></h3>
+            <p> {{recipe.description}}</p>
+            <div class="icon-size">
+                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit select-edit "></i></a>
+                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt select-delete  "></i></a>
+                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Favourite"><i  class="far fa-star checked"></i></a>
+                <a  onclick="myPrint()"><i class="fas fa-print"></i></a>
+                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Share"> <i class="fas fa-share"></i></a>
+                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://www.website.com."><i class="fas fa-envelope"></i></a>
+                
+                
+                
+               
+            </div>
         </div>
         
-        <div class="col-sm-3 col-xs-6">
-             <p class="cookingInfo">Gluten Free:</p><span>{{recipe.gluten_free}}</span>
-        </div>
-    
+        
+                
+            
+        <div class="recipe-details-container menuinfo col-md-6">
+            
+            <div class="row">
+                <p class="cookingInfo col-md-6">Rating:
+                    <span> {{recipe.rating}}</span>
+                </p>
+                <p class="cookingInfo col-md-6">Difficulty:
+                    <span>{{recipe.difficulty}}</span>
+                </p>
+            </div>
+            <div class="row">
+                <p class="cookingInfo col-md-6">Prep time:
+                    <span>{{recipe.preparation_time}}</span>
+                </p>
+                <p class="cookingInfo col-md-6">Cooking time:
+                    <span>{{recipe.cooking_time}}</span>
+                </p>
+            </div>
+            <div class="row">
+                <p class="cookingInfo col-md-6 ">Vegan Friendly:
+                    <span>{{recipe.vegan_friendly}}</span>
+                </p>
+            
+            
+                <p class="cookingInfo col-md-6 ">Gluten Free:
+                    <span>{{recipe.gluten_free}}</span>
+            </div>
+                </p>
+            </div>
+        </div> 
     </div>
 </div>
+
+   
     
-        
-<hr>
+<div class="container">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-6">
             <h1>Ingredients</h1>
             <hr>
             <p>{{recipe.ingredients}}</p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6">
             <h1>cooking instructions</h1>
             <hr>
             <p>{{recipe.cooking_instructions}}</p>
         </div>
-                
-        <hr>
+       
     </div> 
-    
 </div>
+    
+
 
 
 

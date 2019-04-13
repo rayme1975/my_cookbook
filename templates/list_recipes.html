@@ -2,36 +2,27 @@
 
     {% block content %}
     
-    <button onclick="goBack()">Go Back</button>
+   
     
     <h1>Recipes</h1>
     
     {% for recipe in recipes %}
     
-    
+    <div class="row">
+        <img src="/static/images/thaigreencurry.jpg" alt="Nature" class="responsive">
+    </div>
     
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <h1><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}"</a>{{recipe.title}}</h1>
      </div>  
      
-    <div class="col-md-3 prep">
-            
-            <p class="prep">Prep time:{{recipe.preparation_time}}</p>
-            <p class="prep">Cooking time:{{recipe.cooking_time}}</p>
-        </div>
-     <div class="col-md-4">
+    
+     <div class="col-md-6">
     <p class="desc">{{recipe.description}}</p>
     </div> 
     
-    <div class="col-md-2">
-    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit select-edit "></i></a>
-    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt select-delete  "></i></a>
-    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Favourite"><i  class="far fa-star checked"></i></a>
     
-    
-    
-    </div> 
     
     
     
