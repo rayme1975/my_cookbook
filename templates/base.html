@@ -13,6 +13,9 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+
+    
     <!-- local stylesheet -->
     <link rel="stylesheet" href="/static/style/style.css" type="text/css" />
     
@@ -23,10 +26,10 @@
 </head>
 
 <body>
-    <div class="container">
-        
-        <nav class="navbar navbar-default navbar-fixed-top  ">
-  <div class="container header">
+    
+        <div class="container-fluid header">
+          <nav class="navbar navbar-default">
+  
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -43,11 +46,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="myMenuItems"><a href="/list_recipes">Recipes</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle myMenuItems" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catagories<span class="caret"></span></a>
+          <a href="/list_categories" class="dropdown-toggle myMenuItems" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catagories<span class="caret"></span></a>
           <ul class="dropdown-menu myMenuItems">
             {% for cat in categories %}
             
-            <li><a href="list_recipes">{{cat.category_name}}</a></li>
+            <li><a href="/list_categories">{{cat.category_name}}</a></li>
             
             {% endfor %}
             
@@ -69,30 +72,37 @@
     
     
     
-  </div><!-- /.container-fluid -->
+  
 </nav>
+</div><!-- /.container-fluid -->
+
 
 
         
     {% block content %}
         {% endblock %}
+
         
-    </div>
+    
         
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
    <script>
+   
       function myPrint() {
-      window.print();
+        window.print();
       }
       
       function goBack() {
         window.history.back();
       }
       
-      
-    </script>
+      function goForward() {
+        window.history.forward();
+      }
+  
+      </script>
     
     
     

@@ -4,7 +4,14 @@
 
 <div class="container">
 
-<button onclick="goBack()">Go Back</button>
+<div class="row">
+        <div class="col-xs-6">
+            <button class="direction " title="back" onclick="goBack()">Previous &laquo;</button>
+        </div>
+        <div class="col-xs-6">
+            <button class="direction " title="forward" onclick="goForward()">Next &raquo;</button>
+        </div>
+    </div>
 
 <h3>Add Recipe</h3>
 
@@ -54,7 +61,7 @@
     
     <div class="col-md-3">
         <label >Instructions</label>
-        <textarea type="textarea" id="cooking_instructions" name="cooking_instructions" class="form-control" placeholder="Cooking Instructions"></textarea>
+        <textarea type="text" id="cooking_instructions" name="cooking_instructions" class="form-control" placeholder="Cooking Instructions"></textarea>
       
     </div>
   </div>

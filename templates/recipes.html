@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 
     {% block content %}
-    
-   
-    
-
 
     
 <div class="container">
+    
+    <div class="row">
+        <div class="col-xs-6">
+            <button class="direction " title="back" onclick="goBack()">Previous &laquo;</button>
+        </div>
+        <div class="col-xs-6">
+            <button class="direction " title="forward" onclick="goForward()">Next &raquo;</button>
+        </div>
+    </div>
+    
     <div class="row">
         <div class="col-md-6">
             <h3><a href="#">{{recipe.title}}</a></h3>
@@ -15,55 +21,40 @@
             <div class="icon-size">
                 <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit select-edit "></i></a>
                 <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt select-delete  "></i></a>
-                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Favourite"><i  class="far fa-star checked"></i></a>
-                <a  onclick="myPrint()"><i class="fas fa-print"></i></a>
-                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Share"> <i class="fas fa-share"></i></a>
-                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://www.website.com."><i class="fas fa-envelope"></i></a>
+                <a  onclick="myPrint()" title="Print"><i class="fas fa-print"></i></a>
+                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="http://twitter.com/share?url=https%3A//http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}" title="Share this on Twitter"
+                class="service-links-twitter service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Twitter"><i class="fab fa-twitter"></i></i><span class="service-links-text"></span></a>
+                <a href="http://www.facebook.com/sharer.php?u=https%3A//www.my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}" title="Share on Facebook"
+                class="service-links-facebook service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Facebook"><i class="fab fa-facebook-f"></i><span class="service-links-text"></span></a>
                 
-                
-                
-               
             </div>
         </div>
-        
-        
-                
-            
         <div class="recipe-details-container menuinfo col-md-6">
-            
             <div class="row">
                 <p class="cookingInfo col-md-6">Rating:
-                    <span> {{recipe.rating}}</span>
+                     <span class="cooking-time">{{recipe.rating}}</span>
                 </p>
                 <p class="cookingInfo col-md-6">Difficulty:
-                    <span>{{recipe.difficulty}}</span>
+                    <span class="cooking-time">{{recipe.difficulty}}</span>
                 </p>
             </div>
             <div class="row">
-                <p class="cookingInfo col-md-6">Prep time:
-                    <span>{{recipe.preparation_time}}</span>
-                </p>
-                <p class="cookingInfo col-md-6">Cooking time:
-                    <span>{{recipe.cooking_time}}</span>
-                </p>
+                <p class="cookingInfo col-md-6 col-sm-12">Prep:<span class="cooking-time">{{recipe.preparation_time}}</span></p>
+                <p class="cookingInfo col-md-6 col-sm-12">Cooking:<span class="cooking-time">{{recipe.cooking_time}}</span></p>
             </div>
             <div class="row">
-                <p class="cookingInfo col-md-6 ">Vegan Friendly:
-                    <span>{{recipe.vegan_friendly}}</span>
+                <p class="cookingInfo col-md-6 col-sm-12 ">Vegan Friendly:
+                    <span class="cooking-time">{{recipe.vegan_friendly}}</span>
                 </p>
-            
-            
-                <p class="cookingInfo col-md-6 ">Gluten Free:
-                    <span>{{recipe.gluten_free}}</span>
+                <p class="cookingInfo col-md-6 col-sm-12 ">Gluten Free:
+                    <span class="cooking-time">{{recipe.gluten_free}}</span>
             </div>
                 </p>
-            </div>
-        </div> 
-    </div>
+        </div>
+    </div> 
 </div>
 
-   
-    
 <div class="container">
     <div class="row">
         <div class="col-md-6">

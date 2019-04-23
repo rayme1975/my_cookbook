@@ -29,11 +29,9 @@ def list_recipes():
     
     
 #show choosen  category
-@app.route('/list_categories/<category_id>')
-def list_categories(category_id):
-    
-    the_category = mongo.db.recipes.find({"category_name": ObjectId(category_id)})
-    return render_template('categories.html', category = the_category, recipes = mongo.db.recipes.find(), categories = mongo.db.categories.find())
+@app.route('/list_categories')
+def list_categories():
+    return render_template('categories.html', recipes = mongo.db.recipes.find(), categories=mongo.db.categories.find())
 
 
 #show an individual recipe
@@ -104,6 +102,8 @@ def update_recipe(recipe_id):
     
     })
     return redirect(url_for('list_recipes'))
+    
+    
     
     
 
