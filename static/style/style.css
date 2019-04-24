@@ -12,6 +12,12 @@ body, html {
     border-style: none;
     font-size: 19px;
     margin-top: 10px;
+    z-index: 0;
+}
+
+recipe-description{
+  margin-top: 20px;
+  color: white;
 }
 
 
@@ -74,7 +80,7 @@ p {
 }
 
 a {
-    color: white;
+    color: #2e9fb3;
     text-decoration: none;
 }
 
@@ -129,7 +135,7 @@ li a:hover{
   
 .myMenuItems-banner {
   font-family: "Roboto", Times, serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   color: #428bca;
 }
@@ -146,7 +152,7 @@ h1 {
   font-family: "Ek Mukta", Times, serif;
   font-size: 35px;
   text-transform: capitalize;
-  color: black;
+  color: #2e9fb3;
   
   }
   
@@ -161,22 +167,23 @@ h1 a:hover {
  }
  
 h2{
-  padding-top: 35px;
-  margin-top: 42px;
+  padding-top: 180px;
   max-width: 500px;
   margin: 0 auto;
   font-size: 5rem;
   color: white;
   line-height: 1.2;
-  font-family: "Cookie",sans-serif;
+  font-family: "Ek Mukta", Times, serif;
   font-weight: 400;
-  text-transform:  uppercase;
+  text-transform:  capitalize;
 }
+
+
 
 @media only screen and (max-width: 749px){
 h2 {
     padding-top: 100px;
-    font-size: 25px;
+    font-size: 3.4rem;
     line-height: 1.23529;
 }
 }
@@ -208,11 +215,16 @@ ul li {
 
 
 .navbar-default {
-    background-color: #2e9fb3;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: white;
+    color: #2e9fb3;
+}
+
+div a{
+  color: white;
 }
 
 div {
@@ -232,25 +244,38 @@ div {
 
 /* Bootstrap modified code - start */
 
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    color: white;
-    background-color: #2e9fb3;
+.navbar-brand {
+    padding: 17px 34px;
+}
+    
+
+.container-fluid {
+    height: 50px;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #2e9fb3;
     background-color: white;
 }
 
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+.navbar-default .navbar-toggle .icon-bar {
     background-color: #2e9fb3;
 }
 
+.navbar {
+    border: 0px;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: white;
+}
+
 .navbar-default .navbar-toggle {
-    border-color: #2e9fb3;
+    border-color: white;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: white;
+    color: #2e9fb3;
     
 }
 
@@ -260,16 +285,12 @@ div {
     line-height: 20px;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #2e9fb3;
-}
-
 .navbar-default .navbar-brand {
-    color: white;
+    color: #2e9fb3;
 }
 
 .dropdown-menu>li>a {
-  background-color:  #2e9fb3;
+  background-color:  white;
 }
 
 .dropdown-menu>li>a:hover {

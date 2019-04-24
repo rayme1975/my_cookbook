@@ -4,16 +4,7 @@
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-xs-6">
-            <button class="direction round" title="back" onclick="goBack()">Previous &#8249;</button>
-        </div>
-        <div class="col-xs-6">
-            <button class="direction round" title="forward" onclick="goForward()">&#8250; Next</button>
-        </div>
-    </div>
-
-
+    
     <h3>Edit Recipe</h3>
 
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST">
