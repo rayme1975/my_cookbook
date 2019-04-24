@@ -20,6 +20,16 @@ recipe-description{
   color: white;
 }
 
+.left{
+  background-color: blue;
+  height: 75%;
+}
+
+.right{
+  background-color: green;
+  height: 75%;
+}
+
 
 .bg {
  
@@ -344,13 +354,12 @@ textarea.form-control {
   background-color: #ffffff;
   overflow-x: hidden;  
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 70px;
   text-align:center;
   
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
   text-decoration: none;  
   font-size: 25px;
   color:  #2e9fb3;
@@ -377,8 +386,7 @@ ul{
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 25px;}
   .sidenav a {font-size: 18px;}
 }
-
 /* W3schools side navbar modified code to suit this project - end */

@@ -19,10 +19,6 @@
     <!-- local stylesheet -->
     <link rel="stylesheet" href="/static/style/style.css" type="text/css" />
     
-    
-    
-    
-    
 </head>
 
 <body>
@@ -63,29 +59,15 @@
         <li><a class="myMenuItems" href="/add_recipe">Add Recipe</a></li>
       </ul>
       
-      
-      
     </div><!-- /.navbar-collapse -->
     
-    
-      
-      
-    
-    
-    
-  
 </nav>
 </div><!-- /.container-fluid -->
-
-
-
-        
+    
     {% block content %}
         {% endblock %}
-
         
-    
-        
+  
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -95,27 +77,77 @@
         window.print();
       }
       
-      function goBack() {
-        window.history.back();
-      }
-      
-      function goForward() {
-        window.history.forward();
-      }
-      
       function openNav() {
-  document.getElementById("bs-example-navbar-collapse-1").style.width = "100%";
-}
+       document.getElementById("bs-example-navbar-collapse-1").style.width = "100%";
+      }
 
-/* Close/hide the sidenav */
-function closeNav() {
-  document.getElementById("bs-example-navbar-collapse-1").style.width = "0";
-}
+
+      function closeNav() {
+        document.getElementById("bs-example-navbar-collapse-1").style.width = "0";
+      }
+      
+      /* validation function to stop entering empty field forms */ 
+      function validateForm(){
+        
+        
+        
+        if(document.getElementById('title').value == ""){
+         document.getElementById('title').focus();
+         document.getElementById("title").innerHTML = "Please enter a title";
+         document.getElementById('title').style.borderColor ="red";
+         return false;
+        }
+
+      
+       var number = document.getElementById('difficulty').value ;
+
+        // If number is Not a Number or less than one or greater than 5
+        if (isNaN(number) || number < 1 || number > 5) {
+          document.getElementById('difficulty').focus();
+          document.getElementById("difficulty").innerHTML = "testing";
+          document.getElementById('difficulty').style.borderColor ="red";
+          return false;
+          } 
+          
+        if(document.getElementById('preparation_time').value == ""){
+         document.getElementById('preparation_time').focus();
+         document.getElementById("preparation_time").innerHTML = "Please enter a title";
+         document.getElementById('preparation_time').style.borderColor ="red";
+         return false;
+        }
+        
+        if(document.getElementById('cooking_time').value == ""){
+         document.getElementById('cooking_time').focus();
+         document.getElementById("cooking_time").innerHTML = "Please enter a title";
+         document.getElementById('cooking_time').style.borderColor ="red";
+         return false;
+        }
+        
+        if(document.getElementById('description').value == ""){
+         document.getElementById('description').focus();
+         document.getElementById("description").innerHTML = "Please enter a title";
+         document.getElementById('description').style.borderColor ="red";
+         return false;
+        }
+        
+        if(document.getElementById('ingredients').value == ""){
+         document.getElementById('ingredients').focus();
+         document.getElementById("ingredients").innerHTML = "Please enter a title";
+         document.getElementById('ingredients').style.borderColor ="red";
+         return false;
+        }
+        
+        if(document.getElementById('cooking_instructions').value == ""){
+         document.getElementById('cooking_instructions').focus();
+         document.getElementById("cooking_instructions").innerHTML = "Please enter a title";
+         document.getElementById('cooking_instructions').style.borderColor ="red";
+         return false;
+        }
+         
+        
+      }
   
       </script>
-    
-    
-    
     
 </body>
 
