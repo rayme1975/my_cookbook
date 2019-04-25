@@ -1,3 +1,7 @@
+import ast
+
+
+
 ingredients = " 100g green beans trimmed and halved, 1 tbsp vegetable or sunflower oil, 1 garlic clove chopped, 1 rounded tbsp or 4 tsp Thai green curry paste, 400ml can coconut milk, 2 tsp Thai fish sauce 1 tsp caster sugar, 450g boneless skinless chicken breasts cut into bite-size pieces, 2 fresh kaffir lime leaves finely shredded or 3 wide strips lime zest, plus extra to garnish good handful of basil leaves boiled rice to serve"
 list_of_ingredients = ingredients.split(',') #split string into a list
 

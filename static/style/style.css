@@ -52,7 +52,7 @@ p {
   text-align: center;
   letter-spacing: 3px;
   display: inline-block;
-  margin: 15px 0px 40px 0px;
+  margin: 15px 0px 24px 0px;
   
 }
 
@@ -78,7 +78,7 @@ p {
 
 .cooking-time{
   color: #2e9fb3;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .navbar-fixed-top {
@@ -130,9 +130,8 @@ li a:hover{
 }
 
 .recipe-details-container {
-    border: .0625rem solid #000;
-    border-top: .625rem solid #2e9fb3;
     padding: 0 .625rem;
+    background-color: #fcf4ec;
 }
 
 .fa {
