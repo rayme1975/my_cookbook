@@ -10,9 +10,6 @@
     {% for recipe in recipes %}
     
     <div class="row">
-        <img src="/static/images/thaigreencurry.jpg" alt="Nature" class="responsive">
-    </div>
-    <div class="row">
         <div class="col-md-4">
             <h1><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}"</a>{{recipe.title}}</h1>
         </div>  

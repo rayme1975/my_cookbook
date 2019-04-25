@@ -98,7 +98,9 @@ def update_recipe(recipe_id):
     'vegan_friendly':request.form.get('vegan_friendly'),
     'gluten_free':request.form.get('gluten_free'),
     'add_favourite':request.form.get('add_favourite'),
-    'difficulty':request.form.get('difficulty')
+    'difficulty':request.form.get('difficulty'),
+    'serves':request.form.get('serves')
+    
     
     
     })

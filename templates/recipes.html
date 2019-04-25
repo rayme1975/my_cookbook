@@ -11,21 +11,21 @@
             <h3><a href="#">{{recipe.title}}</a></h3>
             <p> {{recipe.description}}</p>
             <div class="icon-size">
-                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit select-edit "></i></a>
-                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fas fa-trash-alt select-delete  "></i></a>
-                <a  onclick="myPrint()" title="Print"><i class="fas fa-print"></i></a>
-                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+                <a  onclick="myPrint()" title="Print"><i class="fa fa-print"></i></a>
+                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." title="Email"><i class="fa fa-envelope"></i></a>
                 <a href="http://twitter.com/share?url=https%3A//http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}" title="Share this on Twitter"
-                class="service-links-twitter service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Twitter"><i class="fab fa-twitter"></i></i><span class="service-links-text"></span></a>
+                class="service-links-twitter service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Twitter"><i class="fa fa-twitter"></i></i><span class="service-links-text"></span></a>
                 <a href="http://www.facebook.com/sharer.php?u=https%3A//www.my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}" title="Share on Facebook"
-                class="service-links-facebook service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Facebook"><i class="fab fa-facebook-f"></i><span class="service-links-text"></span></a>
+                class="service-links-facebook service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Facebook"><i class="fa fa-facebook"></i><span class="service-links-text"></span></a>
                 
             </div>
         </div>
         <div class="recipe-details-container menuinfo col-md-6">
             <div class="row">
-                <p class="cookingInfo col-md-6">Rating:
-                     <span class="cooking-time">{{recipe.rating}}</span>
+                <p class="cookingInfo col-md-6">serves:
+                     <span class="cooking-time">{{recipe.serves}}</span>
                 </p>
                 <p class="cookingInfo col-md-6">Difficulty:
                     <span class="cooking-time">{{recipe.difficulty}}</span>
@@ -35,13 +35,13 @@
                 <p class="cookingInfo col-md-6 col-sm-12">Prep:<span class="cooking-time">{{recipe.preparation_time}}</span></p>
                 <p class="cookingInfo col-md-6 col-sm-12">Cooking:<span class="cooking-time">{{recipe.cooking_time}}</span></p>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <p class="cookingInfo col-md-6 col-sm-12 ">Vegan Friendly:
                     <span class="cooking-time">{{recipe.vegan_friendly}}</span>
                 </p>
                 <p class="cookingInfo col-md-6 col-sm-12 ">Gluten Free:
                     <span class="cooking-time">{{recipe.gluten_free}}</span>
-            </div>
+            </div> -->
                 </p>
         </div>
     </div> 
@@ -50,16 +50,38 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h1>Ingredients</h1>
-            <hr>
+          <!--  <h1>Ingredients</h1> -->
             
+            <table class="table table-striped table-dark">
+              <thead>
+                <tr>
+                  <th scope="col"><h1>Ingredients</h1></th>
+                  <td><hr></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><p>{{recipe.ingredients}}</p></td>
+                </tr>
+              </tbody>
+            </table>
             
-            <p>{{recipe.ingredients}}</p>
         </div>
         <div class="col-md-6">
-            <h1>cooking instructions</h1>
-            <hr>
-            <p>{{recipe.cooking_instructions}}</p>
+            
+            <table class="table table-striped ">
+              <thead>
+                <tr>
+                  <th scope="col"><h1>cooking instructions</h1></th>
+                  <td><hr></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><p> <p>{{recipe.cooking_instructions}}</p></p></td>
+                </tr>
+              </tbody>
+            </table>
         </div>
        
     </div> 
