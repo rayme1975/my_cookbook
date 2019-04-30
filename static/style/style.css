@@ -255,6 +255,10 @@ h3 a:hover{
   color: #ACAF50;
 }
 
+h3{
+  text-align: center;
+}
+
 
 hr {
   width: 65%;

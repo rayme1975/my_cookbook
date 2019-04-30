@@ -10,13 +10,14 @@
     {% for recipe in recipes %}
     
     <div class="row">
-        <div class="col-xs-6">
-           
+        
+        <div class="col-md-4">
+            <h1><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}"</a>{{recipe.title}}</h1>
         </div>
-        <div class="col-xs-6">
-            <a href="{{url_for('show_recipe', recipe_id=recipe._id)}}"</a>{{recipe.title}}
+        <div class="col-md-6">
              <p class="cookingInfo">Prep:<span class="cooking-time">{{recipe.preparation_time}}</span></p>
                 <p class="cookingInfo">Cooking:<span class="cooking-time">{{recipe.cooking_time}}</span></p>
+        </div>
             
         </div>
     </div>

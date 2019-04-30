@@ -39,37 +39,49 @@
     <div class="row">
         <div class="col-md-6">
           <!--  <h1>Ingredients</h1> -->
+          
+          <table class="table table-striped">
+          <thead>
+            <tr>
+             <th scope="col"><h3>Ingredients</h3></th>
+            </tr>
+          </thead>
+           <tbody>
+                {% for ingredient  in recipe.ingredients %}
+            <tr>
+              <td>{{ingredient}}</td>
+            </tr> 
             
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col"><h3>Ingredients</h3></th>
+             {% endfor %}
+           </tbody>
+        </table>
+           
                  
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><p>{{recipe.ingredients}}</p></td>
-                </tr>
-              </tbody>
-            </table>
-            
         </div>
         <div class="col-md-6">
             
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col"><h1>cooking instructions</h1></th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><p> <p>{{recipe.cooking_instructions}}</p></p></td>
-                </tr>
-              </tbody>
-            </table>
+        <table class="table">
+          <thead>
+            <tr>
+             <th scope="col"><h3>cooking instructions</h3></th>
+            </tr>
+          </thead>
+           <tbody>
+               
+                {% for instruction in recipe.cooking_instructions %}
+                
+            <tr>
+                 
+                
+              <span></span><td>{{instruction}} </td>
+              
+              
+     
+            </tr> 
+            
+             {% endfor %}
+           </tbody>
+        </table>
         </div>
        
     </div> 
