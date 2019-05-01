@@ -59,31 +59,13 @@
                  
         </div>
         <div class="col-md-6">
-            
-        <table class="table">
-          <thead>
-            <tr>
-             <th scope="col"><h3>cooking instructions</h3></th>
-            </tr>
-          </thead>
-           <tbody>
-               
-                {% for instruction in recipe.cooking_instructions %}
-                
-            <tr>
-                 
-                
-              <span></span><td>{{instruction}} </td>
-              
-              
-     
-            </tr> 
-            
-             {% endfor %}
-           </tbody>
-        </table>
+            <h3>cooking instructions</h3>
+            <ol> 
+              {% for instruction in recipe.cooking_instructions %}
+              <li>{{instruction}}</li>
+              {% endfor %}
+            </ol> 
         </div>
-       
     </div> 
 </div>
     
