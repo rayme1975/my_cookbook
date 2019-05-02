@@ -62,6 +62,7 @@ def add_recipe():
 #insert recipe into mongoDB that you added with #add a recipe
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
+  
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('list_recipes'))
@@ -95,8 +96,6 @@ def update_recipe(recipe_id):
     'preparation_time':request.form.get('preparation_time'),
     'cooking_time':request.form.get('cooking_time'),
     'cooking_instructions':request.form.get('cooking_instructions'),
-    'vegan_friendly':request.form.get('vegan_friendly'),
-    'gluten_free':request.form.get('gluten_free'),
     'add_favourite':request.form.get('add_favourite'),
     'difficulty':request.form.get('difficulty'),
     'serves':request.form.get('serves')

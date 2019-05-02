@@ -47,7 +47,7 @@
             </tr>
           </thead>
            <tbody>
-                {% for ingredient  in recipe.ingredients %}
+                {% for ingredient  in recipe.ingredients.splitlines() %}
             <tr>
               <td>{{ingredient}}</td>
             </tr> 
@@ -61,7 +61,8 @@
         <div class="col-md-6">
             <h3>cooking instructions</h3>
             <ol> 
-              {% for instruction in recipe.cooking_instructions %}
+              
+              {% for instruction in recipe.cooking_instructions.split('.') %}
               <li>{{instruction}}</li>
               {% endfor %}
             </ol> 
