@@ -15,21 +15,14 @@ body, html {
     z-index: 0;
 }
 
+.recipe-link{
+  color: white;
+}
+
 recipe-description{
   margin-top: 20px;
   color: white;
 }
-
-.left{
-  background-color: blue;
-  height: 75%;
-}
-
-.right{
-  background-color: green;
-  height: 75%;
-}
-
 
 .bg {
  
@@ -75,7 +68,7 @@ p {
 }
 
 .desc {
-  padding-top: 20px;
+  color: black;
 }
 
 .prep {
@@ -86,25 +79,34 @@ p {
   font-size: 1.625rem;
 }
 
-
 .cookingInfo {
   font-weight: 700;
   margin-top: 10px;
   font-size: 15px;
-  
 }
 
 .cooking-time{
   color: #2e9fb3;
   font-size: 15px;
+  
 }
+
+.ingredient-style{
+  border: 1px solid;
+  opacity: 0.8;
+}
+
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.cooking
 
 .navbar-fixed-top {
     position: relative;
-}
-
-.menuInfo{
-  background-color: #FFF4EC;
 }
 
 a {
@@ -161,12 +163,37 @@ li a:hover{
   border-radius: 50%;
 }
 
+.fas {
+  display: inherit;
+  padding: 7px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+  border-radius: 50%;
+}
+
+.far {
+  display: inherit;
+  padding: 7px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+  border-radius: 50%;
+}
+
 .fa:hover {
     opacity: 0.7;
 }
 
 .fa-utensils {
-  background: #a4c639;
+  background: #a41dda;
+  color: white;
+}
+
+.fa-clock {
+  background: #1ddab8;
   color: white;
 }
 
@@ -238,7 +265,6 @@ h1 a:hover {
  }
  
 h2{
-  padding-top: 180px;
   max-width: 500px;
   margin: 0 auto;
   font-size: 5rem;
@@ -249,11 +275,9 @@ h2{
   text-transform:  capitalize;
 }
 
-
-
 @media only screen and (max-width: 749px){
 h2 {
-    padding-top: 100px;
+    
     font-size: 3.4rem;
     line-height: 1.23529;
 }
@@ -276,15 +300,27 @@ h3{
   text-align: center;
 }
 
+h4 a{
+  font-family: "SerifaBT-Light",Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333;
+    margin: 0 0 2px;
+    padding: 0;
+    font-weight: 100;
+    
+}
+
 
 hr {
-  width: 65%;
-  height: 3px;
-  background-color: #2e9fb3;
+      width: 65%;
+    height: 1px;
+    background-color: #d9edf7;
 }
 
 ul li {
   list-style-type: none;
+   
 }
 
 

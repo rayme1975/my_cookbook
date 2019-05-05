@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- fontawesome -->
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,7 +48,7 @@
           <ul class="dropdown-menu myMenuItems">
             {% for cat in categories %}
             
-            <li><a href="/list_categories">{{cat.category_name}}</a></li>
+            <li><a href="{{cat.category_name}}">{{cat.category_name}}</a></li>
             
             {% endfor %}
             
@@ -87,7 +87,7 @@
         document.getElementById("bs-example-navbar-collapse-1").style.width = "0";
       }
       
-      /* validation function to stop entering empty field forms */ 
+      /* validation function to stop entering empty field forms - start */ 
       function validateForm(){
         
         
@@ -147,6 +147,22 @@
          
         
       }
+      
+      /* validation function to stop entering empty field forms - end */ 
+      
+      function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+            } 
   
       </script>
     
