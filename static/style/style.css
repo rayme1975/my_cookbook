@@ -51,6 +51,11 @@ recipe-description{
   background-size: cover;
 }
 
+.category-image-size{
+  padding-bottom: 200px;
+  width: 80%;
+}
+
 .centered {
   position: absolute;
   top: 66%;
@@ -93,7 +98,7 @@ p {
 
 .ingredient-style{
   border: 1px solid;
-  opacity: 0.8;
+  opacity: 0.8
 }
 
 img {
@@ -151,6 +156,7 @@ li a:hover{
 .recipe-details-container {
     padding: 0 .625rem;
     background-color: #fcf4ec;
+    margin-bottom: 35px;
 }
 
 .fa {

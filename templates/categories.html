@@ -3,15 +3,39 @@
     {% block content %}
     
     <h1>Categories</h1>
+   
+   
+       <div class="row">
+        
+            {% for cat in categories %}
+            
+            
+           
+                <div class="col-md-2 col-xs-6">
+                    <div class="category-image-size">
+                      <img class="img-thumbnail img-responsive" src="\static\images\{{cat.category_name}}.jpg" alt="{{cat.category_name}} image">
+                      <p>{{cat.category_name}}</p>
+                    </div>
+                </div>
+        
+            {% endfor %}
+        </div>
+   
+ 
+    <!--
+    
+    {% for cat in categories %}
+            
+            <li><a href="cat.category_name">cat.category_name</a></li>
+            
+            {% endfor %}
     
     {% for recipe in recipes %}
     
         
             
-            <li><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}">{{recipe.category_name}} {{recipe.title}}</a></li>
+            <li><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}">{{recipe.category_name}} {{recipe.title}}</a></li> 
             
-            {% endfor %}
-            
-    
+            {% endfor %} -->
             
 {% endblock %}

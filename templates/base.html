@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- fontawesome -->
     
@@ -25,6 +26,9 @@
 <body>
     
         <div class="container-fluid header">
+            
+            
+            
           <nav class="navbar navbar-default">
   
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,19 +47,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <ul class="nav navbar-nav navbar-right">
         <li class="myMenuItems"><a href="/list_recipes">Recipes</a></li>
-        <li class="dropdown">
-          <a href="/list_categories" class="dropdown-toggle myMenuItems" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catagories<span class="caret"></span></a>
-          <ul class="dropdown-menu myMenuItems">
-            {% for cat in categories %}
-            
-            <li><a href="{{cat.category_name}}">{{cat.category_name}}</a></li>
-            
-            {% endfor %}
-            
-          
-          </ul>
-        </li>
-        
+        <li class="myMenuItems"><a href="/list_categories">Categories</a></li>
         <li><a class="myMenuItems" href="/show_favourites">Favourites</a></li>
         <li><a class="myMenuItems" href="/add_recipe">Add Recipe</a></li>
       </ul>
@@ -162,7 +154,16 @@
           }
           document.getElementById(cityName).style.display = "block";
           evt.currentTarget.className += " active";
-            } 
+            }
+            
+        $('#demo').pagination({
+        dataSource: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+        callback: function(data, pagination) {
+        // template method of yourself
+        var html = template(data);
+        dataContainer.html(html);
+    }
+})
   
       </script>
     
