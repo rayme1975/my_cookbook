@@ -1,13 +1,15 @@
 
 ## My Cook Book
 
-One or two paragraphs providing an overview of your project.
+The purpose of this project is to give the user access to their own personal list of Recipes with the ability to
+Create, Update and Delete recipes as they wish. This is done through a user friendly website which is optomised for a mobile platform.
 
-Essentially, this part is your sales pitch.
+
+
  
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+This website will appeal to users who have an interest in home cooking or baking.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 - As a user type, I want to perform an action, so that I can achieve a goal.
@@ -19,6 +21,11 @@ This section is also where you would share links to any wireframes, mockups, dia
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
+- Feature 1 - allows users Create a custom Recipe of there choice by filling out the form which is located under Add Recipe link.
+- Feature 2 - allows to add a Recipe to their Favourite list which is achieved under the edit recipe option.
+- Feature 1 - allows users X to achieve Y, by having them fill out Z
+- Feature 1 - allows users X to achieve Y, by having them fill out Z
+- Feature 1 - allows users X to achieve Y, by having them fill out Z
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
 

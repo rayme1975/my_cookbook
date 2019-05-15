@@ -6,7 +6,7 @@
 <div class="container recipe-details-container">
     
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-lg-offset-2 col-lg-8">
             <h1><a href="#">{{recipe.title}}</a></h1>
             <p> {{recipe.description}}</p>
             
@@ -80,7 +80,7 @@
               {% for instruction in recipe.cooking_instructions.split('.') %}
               <li>{{instruction}}</li>
               
-              <hr>
+             
               
               {% endfor %}
             </ol> 

@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     
     <!-- local stylesheet -->
@@ -25,37 +29,31 @@
 
 <body>
     
-        <div class="container-fluid header">
+        <div class="jumbotron container">
+       
             
-            
-            
-          <nav class="navbar navbar-default">
-  
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed"  onclick="openNav()" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand myMenuItems-banner"  href="/home_page">My CookBook</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="sidenav" id="bs-example-navbar-collapse-1">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="myMenuItems"><a href="/list_recipes">Recipes</a></li>
-        <li class="myMenuItems"><a href="/list_categories">Categories</a></li>
-        <li><a class="myMenuItems" href="/show_favourites">Favourites</a></li>
-        <li><a class="myMenuItems" href="/add_recipe">Add Recipe</a></li>
-      </ul>
-      
-    </div><!-- /.navbar-collapse -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand"  href="/home_page">My CookBook</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarText">
+                <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item"><a href="/list_recipes">Recipes</a></li>
+                <li class="nav-item"><a href="/list_categories">Categories</a></li>
+                <li class="nav-item"><a href="/show_favourites">Favourites</a></li>
+                <li class="nav-item"><a href="/add_recipe">Add Recipe</a></li>
+              </ul>
+                
+              </div>
+          </nav>
     
-</nav>
-</div><!-- /.container-fluid -->
+</nav> 
+
+</div>
+
+
+
     
     {% block content %}
         {% endblock %}
@@ -142,28 +140,10 @@
       
       /* validation function to stop entering empty field forms - end */ 
       
-      function openCity(evt, cityName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(cityName).style.display = "block";
-          evt.currentTarget.className += " active";
-            }
+     
             
-        $('#demo').pagination({
-        dataSource: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
-        callback: function(data, pagination) {
-        // template method of yourself
-        var html = template(data);
-        dataContainer.html(html);
-    }
-})
+        
+
   
       </script>
     

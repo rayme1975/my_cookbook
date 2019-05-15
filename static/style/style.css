@@ -7,7 +7,7 @@ body, html {
     position: absolute;
     width: 140px;
     height: 44px;
-    background-color: #2e9fb3;
+    background-color: black;
     color: white;
     border-style: none;
     font-size: 19px;
@@ -24,19 +24,11 @@ recipe-description{
   color: white;
 }
 
-.bg {
- 
-  background-image: url("/static/images/markus-spiske-139525-unsplash.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .favourite_pic {
  
   background-image: url("/static/images/brooke-lark-230140-unsplash.jpg");
-  height: 75%;
+  height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,11 +37,31 @@ recipe-description{
 .recipe_pic {
  
   background-image: url("/static/images/recipe_pic.jpg");
-  height: 75%;
+  height: 300px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.categories_pic {
+  background-image: url("/static/images/dan-gold-298710-unsplash.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.add_recipe_pic {
+  background-image: url("/static/images/monika-grabkowska-1121828-unsplash.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
 
 .category-image-size{
   padding-bottom: 200px;
@@ -98,7 +110,8 @@ p {
 
 .ingredient-style{
   border: 1px solid;
-  opacity: 0.8
+  opacity: 0.8;
+  font-family: monospace;
 }
 
 img {
@@ -357,6 +370,13 @@ div {
 
 /* Bootstrap modified code - start */
 
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    background-color: transparent;
+}
+
 .navbar-brand {
     padding: 17px 34px;
 }
@@ -452,6 +472,9 @@ ol>li{
   font-size: 17px;
   float: left;
   padding: 8px;
+  margin-left: -15px;;
+  font-family: monospace;
+  margin-right: 10px
 }
 
 
@@ -461,6 +484,51 @@ ol>li{
 
 
 /* W3schools side navbar modified code to suit this project - start */
+
+
+.container-style {
+  position: absolute;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 180px;
+  height: 270px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 270px;
+  width: 180px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ccc;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: Black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
 
 .sidenav {
   height: 100%;

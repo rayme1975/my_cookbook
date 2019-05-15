@@ -2,7 +2,10 @@
 
     {% block content %}
     
-    <div class="favourite_pic"></div>
+    
+   
+                <div class="favourite_pic col-lg-offset-2 col-lg-8"></div>
+    
     
     <div> <!-- credit for photographer -->
         <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system,
@@ -21,10 +24,10 @@
     
     <div>
         <div class="row">
-            <div class="col-md-4">
-                <h2><a href="{{url_for('show_recipe', recipe_id=favourite._id)}}"</a>{{favourite.title}}</h2>
+            <div class=" col-md-offset-2 col-md-4 col-xs-12">
+                <h3><a href="{{url_for('show_recipe', recipe_id=favourite._id)}}"</a>{{favourite.title}}</h3>
             </div>  
-            <div class="col-md-6">
+            <div class="col-md-4 col-xs-12">
                 <p class="desc">{{favourite.description}}</p>
             </div>
             
