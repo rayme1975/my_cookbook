@@ -4,7 +4,7 @@
     
     
    
-                <div class="favourite_pic col-lg-offset-2 col-lg-8"></div>
+                <div class="favourite_pic col-lg-offset-2 col-lg-8 container"></div>
     
     
     <div> <!-- credit for photographer -->
@@ -22,12 +22,12 @@
 
     {% for favourite in favourites %}
     
-    <div>
+    <div class="container">
         <div class="row">
-             <div class=" col-lg-4 ">
+             <div class=" col-md-4 ">
                 <h3><a href="{{url_for('show_recipe', recipe_id=favourite._id)}}"</a>{{favourite.title}}</h3>
             </div>  
-            <div class=" col-lg-3 ">
+            <div class=" col-md-4 ">
                 <p class="desc">{{favourite.description}}</p>
             </div>
             

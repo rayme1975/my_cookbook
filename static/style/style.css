@@ -3,17 +3,6 @@ body, html {
   margin: 0;
 }
 
-.recipe-button{
-    position: absolute;
-    width: 140px;
-    height: 44px;
-    background-color: black;
-    color: white;
-    border-style: none;
-    font-size: 19px;
-    margin-top: 10px;
-    z-index: 0;
-}
 
 .recipe-link{
   color: white;
@@ -26,18 +15,16 @@ recipe-description{
 
 
 .favourite_pic {
- 
   background-image: url("/static/images/brooke-lark-230140-unsplash.jpg");
-  height: 300px;
+  height: 580px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .recipe_pic {
- 
   background-image: url("/static/images/recipe_pic.jpg");
-  height: 300px;
+  height: 580px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +32,7 @@ recipe-description{
 
 .categories_pic {
   background-image: url("/static/images/dan-gold-298710-unsplash.jpg");
-  height: 300px;
+   height: 580px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,15 +40,19 @@ recipe-description{
 
 .add_recipe_pic {
   background-image: url("/static/images/aaron-burden-64849-unsplash.jpg");
-  height: 300px;
+  height: 580px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.item-description{
+  padding-top: 110px;
+}
 
-
-
+.homepage-item{
+  padding-left: 170px;
+}
 
 .category-image-size{
   padding-bottom: 200px;
@@ -83,7 +74,6 @@ p {
   margin: 15px 0px 24px 0px;
   
 }
-
 .desc {
   color: black;
 }
@@ -128,17 +118,23 @@ img {
 }
 
 a {
-    color: #2e9fb3;
+    color: white;
     text-decoration: none;
 }
 
 a:hover{
+  color: white;
    text-decoration: none;
 }
 
 
+li a{
+  color: black;;
+  text-decoration: none;
+}
+
 li a:hover{
-  color: #4CAF50;
+  color: black;;
   text-decoration: none;
 }
 
@@ -416,6 +412,8 @@ div {
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
 }
 
 .navbar-default .navbar-brand {
@@ -479,6 +477,13 @@ ol>li{
 
 
 
+.bg-light {
+    background-color: transparent!important;
+}
+
+
+
+
 
 /* Bootstrap modified code - end */
 
@@ -493,8 +498,8 @@ ol>li{
 
 .image {
   display: block;
-  width: 180px;
-  height: 270px;
+  width: 100%;
+  height: 100%;
 }
 
 .overlay {
@@ -503,15 +508,25 @@ ol>li{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 270px;
-  width: 180px;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #ccc;
 }
 
 .container:hover .overlay {
-  opacity: 1;
+  opacity: 0.8;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
 }
 
 .text {
@@ -524,34 +539,6 @@ ol>li{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-
-
-
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #ffffff;
-  overflow-x: hidden;  
-  transition: 0.5s;
-  padding-top: 70px;
-  text-align:center;
-  
-}
-
-.sidenav a {
-  text-decoration: none;  
-  font-size: 25px;
-  color:  #2e9fb3;
-  display: block;
-  transition: 0.3s;
-
 }
 
 ul{
