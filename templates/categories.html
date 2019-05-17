@@ -2,36 +2,80 @@
 
     {% block content %}
     
+    
+    <div class="row">
+   
+   <div class="recipe_pic col-lg-3 container" >
+     <div class="overlay content">
+     <a href="/list_recipes">
+      <p>Recipes</p>
+      <div class="item-description">
+        <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div></a>
+    </div>
+   </div>
+   <div class="d-lg-none homepage-item">
+     <p>Recipes</p>
+    </div>
+     
+     
+ <!-- Favourites -->
+      <div class="favourite_pic col-lg-3 container" >
+      <div class="overlay content">
+       <a href="/show_favourites">
+       <p>Favourites</p>
+       <div class="item-description">
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div>
+  </div>
+   </a>
+      </div>
+      <div class="d-lg-none homepage-item">
+     <p>Favourites</p>
+    </div>
+      
+      
+ <!-- Categories -->
+  
+     <div class="categories_pic col-lg-3 container" >
+      <div class="content">
+       <a href="/list_categories">
+    <p>Categories</p>
+    <div class="item-description">
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div>
+    </a>
+  </div>
+      </div>
+      <div class="d-lg-none homepage-item">
+     <p>Categories</p>
+    </div>
+     
+      
+      <!-- Add Recipe -->
+      <div class="add_recipe_pic col-lg-3 container" >
+      <div class="overlay content">
+       <a href="/add_recipe">
+       <p>Add Recipe</p>
+    <div class="item-description">
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div></a>
+  </div>
+     </div>
+     <div class="d-lg-none homepage-item">
+     <p>Add Recipe</p>
+    </div>
+      
+       
+    </div>
+    
+    
     <h1>Categories</h1>
    
    
       
         
-    <div class="row">
-        
-            {% for cat in categories %}
-            
-           
-           
-                <div class="col-xs-3">
-                   
-                    <div class="category-image-size">
-                      <a href="#{{cat.category_name}}"> <img class="img-thumbnail img-responsive" src="\static\images\{{cat.category_name}}.jpg" alt="{{cat.category_name}} image">
-                           </a>
-                         
-                           <p>{{cat.category_name}}</p>
-                           
-                           
-                           
-                     
-                    </div>
-                </div>
-               
-        
-            {% endfor %}
-            
-            
-        </div>
+   
             
         
    
