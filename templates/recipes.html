@@ -6,23 +6,31 @@
 <div class="container recipe-details-container">
     
     <div class="row">
-        <div class="col-lg-offset-2 col-lg-8">
+        <div class="col-lg-12">
             <h1><a href="#">{{recipe.title}}</a></h1>
             <p> {{recipe.description}}</p>
+       
+        </div> 
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12 edit-trash-email ">
             
-                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
-                <a  onclick="myPrint()" title="Print"><i class="fa fa-print"></i></a>
-                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." title="Email"><i class="fa fa-envelope"></i></a>
-                <a href="http://twitter.com/share?url=https%3A//http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}" title="Share this on Twitter"
-                class="service-links-twitter service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Twitter"><i class="fa fa-twitter"></i></i><span class="service-links-text"></span></a>
-                <a href="http://www.facebook.com/sharer.php?u=https%3A//www.my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}" title="Share on Facebook"
-                class="service-links-facebook service-links-link analytics-processed service-links-popup-processed" rel="nofollow" data-service-name="Facebook"><i class="fa fa-facebook"></i><span class="service-links-text"></span></a>
-                
-           
-        
+                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." class="desc icon-size cooking-time"data-toggle="tooltip" data-placement="top" title="email" title="Email"><i class="fa fa-envelope"></i></a>
+       
+        </div> 
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12">
             
-           
+                <span class="cooking-time"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
+                <span class="cooking-time"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
+                <span><i class="far fa-clock"></i></span></li>
+                <span Prep class="cooking-time">Prep: {{recipe.preparation_time}}</span>
+                <span class="cooking-time">Cook: {{recipe.cooking_time}}</span>
        
         </div> 
     </div>
@@ -30,23 +38,7 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        
         <div class="row">
-                
-                <span class="cooking-time"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
-                <span class="cooking-time"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
-                <span><i class="far fa-clock"></i></span></li>
-                <span Prep class="cooking-time">Prep: {{recipe.preparation_time}}</span>
-                <span class="cooking-time">Cook: {{recipe.cooking_time}}</span>
-               
-            </div>
-        
-       
-         
-        </div>
-        
-        
             
             <div class="col-md-6 ingredient-style">
           <!--  <h1>Ingredients</h1> -->
@@ -71,7 +63,7 @@
         
        
             
-             <div class="col-md-6">
+             <div class="col-md-6 ingredient-style">
                  
                  
             <h3>cooking instructions</h3>
@@ -85,46 +77,10 @@
               {% endfor %}
             </ol> 
         </div>
-          
-          
-    
         
-       
-        
-        
-        
-        
-     <!--   <div class="col-md-6">
-          <!--  <h1>Ingredients</h1>
-          
-          <table class="table table-striped">
-          <thead>
-            <tr>
-             <th scope="col"><h3>Ingredients</h3></th>
-            </tr>
-          </thead>
-           <tbody>
-               <!-- seperate ingredients with new line using splitlines() 
-                {% for ingredient  in recipe.ingredients.splitlines() %}
-            <tr>
-              <td>{{ingredient}}</td>
-            </tr> 
-            
-             {% endfor %}
-           </tbody>
-        </table>
-           
-                 
         </div>
-        <div class="col-md-6">
-            <h3>cooking instructions</h3>
-            <ol> 
-              <!-- seperate cooking instruction with new line using split() with a delimiter of ('.') , user will have to be informed that each instruction has to end with a period 
-              {% for instruction in recipe.cooking_instructions.split('.') %}
-              <li>{{instruction}}</li>
-              {% endfor %}
-            </ol> 
-        </div> -->
+          
+     
     </div> 
 </div>
     

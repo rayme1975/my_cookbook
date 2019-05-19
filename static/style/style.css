@@ -13,6 +13,14 @@ recipe-description{
   color: white;
 }
 
+.thai_pic {
+  background-image: url("/static/images/thai.jpg");
+  height: 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .favourite_pic {
   background-image: url("/static/images/brooke-lark-230140-unsplash.jpg");
@@ -99,13 +107,11 @@ p {
 }
 
 .ingredient-style{
-  border: 1px solid;
-  opacity: 0.8;
   font-family: monospace;
 }
 
 img {
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
   z-index: -1;
@@ -212,21 +218,6 @@ li a:hover{
   color: white;
 }
 
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-print {
-  background: #a4c639;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
 .fa-edit {
   background: #45bbff;
   color: white;
@@ -240,6 +231,10 @@ li a:hover{
 .fa-envelope {
   background: #ff6600;
   color: white;
+}
+
+.edit-trash-email{
+  float: left;
 }
 
   
