@@ -371,7 +371,7 @@ div {
 
 .jumbotron {
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: -20px;
     border-radius: .3rem;
     background-color: transparent;
 }
@@ -552,21 +552,4 @@ ul{
   list-style-type:none; 
 }
 
-.sidenav a:hover{
-  color: #f1f1f1;
-  list-style-type:none; 
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 25px;}
-  .sidenav a {font-size: 18px;}
-}
 /* W3schools side navbar modified code to suit this project - end */
