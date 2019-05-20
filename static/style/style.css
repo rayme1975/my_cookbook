@@ -24,15 +24,16 @@ recipe-description{
 
 .favourite_pic {
   background-image: url("/static/images/brooke-lark-230140-unsplash.jpg");
-  height: 580px;
+  height: 325px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .recipe_pic {
   background-image: url("/static/images/recipe_pic.jpg");
-  height: 580px;
+  height: 325px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,7 +41,7 @@ recipe-description{
 
 .categories_pic {
   background-image: url("/static/images/dan-gold-298710-unsplash.jpg");
-   height: 580px;
+   height: 325px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,14 +49,14 @@ recipe-description{
 
 .add_recipe_pic {
   background-image: url("/static/images/aaron-burden-64849-unsplash.jpg");
-  height: 580px;
+  height: 325px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .item-description{
-  padding-top: 110px;
+  padding-top: 40px;
 }
 
 .homepage-item{
@@ -317,8 +318,9 @@ h4 a{
     margin: 0 0 2px;
     padding: 0;
     font-weight: 100;
-    
-}
+  }
+  
+
 
 
 hr {
