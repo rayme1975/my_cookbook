@@ -1,17 +1,75 @@
 {% extends 'base.html' %}
 
     {% block content %}
-
     
-<div class="container recipe-details-container">
     
     <div class="row">
-        <div class="col-lg-12">
-            <h1><a href="#">{{recipe.title}}</a></h1>
-            <p> {{recipe.description}}</p>
-       
-        </div> 
+        
+   <!-- Recipes -->
+   <div class="recipe_pic pic_parameters col-lg-3 container img-thumbnail" >
+     <div class="content">
+     <a href="/list_recipes">
+      <p>{{recipe.title}}</p>
+      <div class="item-description">
+        <p>{{recipe.description}}</p>
+    </div></a>
     </div>
+   </div>
+   
+     
+     
+ <!-- Favourites -->
+      <div class="favourite_pic pic_parameters col-lg-3 d-sm-block d-none d-sm-none d-md-block  container" >
+      <div class="overlay content">
+       <a href="/show_favourites">
+       <p>Favourites</p>
+       <div class="item-description">
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div>
+  </div>
+   </a>
+      </div>
+      <div class="d-lg-none d-sm-block d-none d-sm-none d-md-block homepage-item">
+     <p>Favourites</p>
+    </div>
+      
+      
+ <!-- Categories -->
+  
+     <div class="categories_pic pic_parameters col-lg-3 d-sm-block d-none d-sm-none d-md-block   container" >
+      <div class="overlay content">
+       <a href="/list_categories">
+    <p>Categories</p>
+    <div class="item-description">
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div>
+    </a>
+  </div>
+      </div>
+      <div class="d-lg-none d-sm-block d-none d-sm-none d-md-block homepage-item">
+     <p>Categories</p>
+    </div>
+     
+      
+      <!-- Add Recipe -->
+      <div class="add_recipe_pic pic_parameters col-lg-3 d-sm-block d-none d-sm-none d-md-block container" >
+      <div class="overlay content">
+       <a href="/add_recipe">
+       <p>Add Recipe</p>
+    <div class="item-description">
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div></a>
+  </div>
+     </div>
+     <div class="d-lg-none d-sm-block d-none d-sm-none d-md-block homepage-item">
+     <p>Add Recipe</p>
+    </div>
+      
+       
+    </div>
+
+    
+<div class="">
     
     <div class="row">
         <div class="col-lg-12 edit-trash-email ">
@@ -19,23 +77,25 @@
                 <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
                 <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
                 <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." class="desc icon-size cooking-time"data-toggle="tooltip" data-placement="top" title="email" title="Email"><i class="fa fa-envelope"></i></a>
-       
-        </div> 
-    </div>
-    
-    <div class="row">
-        <div class="col-lg-12">
             
-                <span class="cooking-time"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
-                <span class="cooking-time"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
-                <span><i class="far fa-clock"></i></span></li>
+                <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Serves"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
+                <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Difficulty"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
+                
+       </div>
+       </div>
+       
+        <div class="row">
+        <div class="col-lg-12 edit-trash-email ">
+                <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="prep and cook time" ><i class="far fa-clock"></i></span>
                 <span Prep class="cooking-time">Prep: {{recipe.preparation_time}}</span>
                 <span class="cooking-time">Cook: {{recipe.cooking_time}}</span>
+                
+        </div>
+       </div>
        
-        </div> 
+       
+       
     </div>
-
-</div>
 
 <div class="container">
         <div class="row">
