@@ -23,7 +23,7 @@ In this section, you should go over the different parts of your project, and des
 ### Existing Features
 - Feature 1 - allows users Create a custom Recipe of there choice by filling out the form which is located under Add Recipe link.
 - Feature 2 - allows to add a Recipe to their Favourite list which is achieved under the edit recipe option.
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
+- Feature 1 - allows users to email a recipe to a friend or collegue by clicking on the email option  which is available on the Recipe page
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
