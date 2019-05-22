@@ -98,9 +98,13 @@
     </div>
 
 <div class="container">
-        <div class="row">
+        <div class="row d-block d-sm-none">
+            <div class="tab">
+              <button class="tablinks" onclick="openTab(event, 'ingredients')">Ingredients</button>
+              <button class="tablinks" onclick="openTab(event, 'instructions')">Instructions</button>
+            </div>
             
-            <div class="col-md-6 ingredient-style">
+            <div class="col-md-6 ingredient-style tabcontent" id="ingredients">
           <!--  <h1>Ingredients</h1> -->
           
           <table class="table table-striped">
@@ -123,13 +127,13 @@
         
        
             
-             <div class="col-md-6 ingredient-style">
+             <div class="col-md-6 ingredient-style tabcontent" id="instructions">
                  
                  
             <h3>cooking instructions</h3>
             <ol> 
               <!-- seperate cooking instruction with new line using split() with a delimiter of ('.') , user will have to be informed that each instruction has to end with a period -->
-              {% for instruction in recipe.cooking_instructions.split('.') %}
+              {% for instruction in recipe.cooking_instructions.split('#') %}
               <li>{{instruction}}</li>
               
              

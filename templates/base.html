@@ -126,13 +126,24 @@
          document.getElementById('cooking_instructions').style.borderColor ="red";
          return false;
         }
-        
-   
-         
-        
       }
       
       /* validation function to stop entering empty field forms - end */ 
+      
+      
+      function openTab(event, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
       
      
             
