@@ -542,10 +542,12 @@ ul{
 
 /* W3schools side navbar modified code to suit this project - end */
 
-/* Style the tab */
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) { 
 
+
+/* Style the tab */
 .tab {
   overflow: hidden;
 }
