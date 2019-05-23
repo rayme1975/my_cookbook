@@ -543,10 +543,11 @@ ul{
 /* W3schools side navbar modified code to suit this project - end */
 
 /* Style the tab */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+
 .tab {
   overflow: hidden;
-  
-  
 }
 
 /* Style the buttons inside the tab */
@@ -575,6 +576,7 @@ ul{
 .tabcontent {
   display: none;
   padding: 6px 12px;
- 
   border-top: none;
+}
+
 }
