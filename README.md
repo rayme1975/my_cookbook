@@ -11,30 +11,41 @@ Create, Update and Delete recipes as they wish. This is done through a user frie
  
 This website will appeal to users who have an interest in home cooking or baking.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
-- Feature 1 - allows users Create a custom Recipe of there choice by filling out the form which is located under Add Recipe link.
-- Feature 2 - allows to add a Recipe to their Favourite list which is achieved under the edit recipe option.
-- Feature 1 - allows users to email a recipe to a friend or collegue by clicking on the email option  which is available on the Recipe page
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- Feature 1 - allows users Create a custom Recipe of there choice by filling out the form which is located under Add Recipe link. This is located on the far right hand side on the home page. For mobile view(smartphone), the same link can be located in the drop downmenu or by scrolling to the bottom of the screen
+
+![Alt dropdown](images/select_team.png "Dashboard")
+
+- Feature 2 - allows to add a Recipe to their Favourite list which is achieved by ticking the
+### Add to favourites
+checkbox under the edit recipe option. 
+
+![Alt dropdown](images/select_team.png "Dashboard")
+
+- Feature 3 - allows users to email a recipe to a friend or collegue by clicking on the email option  which is available on the Recipe page
+
+![Alt dropdown](images/select_team.png "Dashboard")
+
+- Feature 4 - allows users to edit any recipe by clicking on the edit button located on the Recipe page
+- 
+![Alt dropdown](images/select_team.png "Dashboard")
+
+
+
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Another feature idea
+
+- Future features may have included a user login option for the purpose of rating or reviewing recipes.
 
 ## Technologies Used
 
@@ -79,12 +90,23 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The text for Add Recipe description was copied from the [Alldishes submit your recipe](http://dish.allrecipes.com/customer-service/submit-your-recipes/)
 
 ### Media
 - The photos used in this site were obtained from ...
 
+- [Unsplash](https://unsplash.com/)
+
 ### Acknowledgements
 
-- I received inspiration for this project from X
+I took influence from the following websites
+
+ In particular the Recipe layout
+- [BBC Good Food](https://www.bbcgoodfood.com/)
+
+- [Delish, Recipes, Party, Food](https://www.delish.com/)
+
+
+
+
 
