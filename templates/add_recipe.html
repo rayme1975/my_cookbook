@@ -4,149 +4,135 @@
 
  
     
-    <div class="row">
+<div class="row">
    
-   <div class="recipe_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
-     <div class="overlay content">
-     <a href="/list_recipes">
-      <p>Recipes</p>
-      <div class="item-description">
-        <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div></a>
+<div class="recipe_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
+    <div class="overlay content">
+        <a href="/list_recipes">
+        <p>Recipes</p>
+        <div class="item-description">
+             <p>Feel free to browse through a vast array of Recipes</p>
+        </div>
+        </a>
     </div>
-   </div>
+</div>
    
      
      
- <!-- Favourites -->
-      <div class="favourite_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
-      <div class="overlay content">
-       <a href="/show_favourites">
-       <p>Favourites</p>
-       <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+<!-- Favourites -->
+<div class="favourite_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
+    <div class="overlay content">
+    <a href="/show_favourites">
+    <p>Favourites</p>
+    <div class="item-description">
+     <p>Here you can view a list of your favourite Recipes</p>
     </div>
-  </div>
-   </a>
-      </div>
+     </a>
+    </div>
+   
+</div>
      
       
       
- <!-- Categories -->
+
   
-     <!-- Recipes -->
-     <div class="categories_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
-      <div class="overlay content">
-       <a href="/list_categories">
-    <p>Categories</p>
-    <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div>
-    </a>
-  </div>
-      </div>
+<!-- Categories -->
+<div class="categories_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
+<div class="overlay content">
+<a href="/list_categories">
+<p>Categories</p>
+<div class="item-description">
+ <p>Choose from Thai, Indian, Italian Food. A list of mouthwatering desserts or refreshing smoothies or cocktails, alcohol optional of course!</p>
+</div>
+</a>
+</div>
+</div>
       
      
       
-      <!-- Add Recipe -->
-      <div class="add_recipe_pic pic_parameters col-lg-3 container" >
-      <div class="content">
-       <a href="/add_recipe">
-       <p>Add Recipe</p>
-    <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div></a>
-  </div>
-     </div>
-    </div>
+<!-- Add Recipe -->
+<div class="add_recipe_pic pic_parameters col-lg-3 container" >
+<div class="content">
+<a href="/add_recipe">
+<p>Add Recipe</p>
+<div class="item-description">
+<p>You can name your recipe, give prep & cook times, put an eye-catching description, list the ingredients & directions, and offer the time the recipe will be ready in, how many servings the recipe makes, and how much the recipe yields</p>
+</div>
+</a>
+</div>
+</div>
+</div>
 
 
 <div class="container">
 
-<form action="{{ url_for('insert_recipe')}}" onsubmit="return validateForm()" method="POST">
-  <div class="row">
+    <form action="{{ url_for('insert_recipe')}}" onsubmit="return validateForm()" method="POST">
+        <div class="row">
+            <div class="col-lg-3">
+                <label >category</label>
+                <select class="form-control" id="category" name="category_name">
+                    <option value="" disabled selected>choose category</option>
+                    {% for cat in categories %}
+                    <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+                    
+            <div class="col-lg-3  ">
+                <label >Recipe Title</label>
+                <input type="text" id="title" name="title" class="form-control" placeholder="Recipe Title">
+            </div>
+                
+            <div class="col-lg-3">
+                <label >preparation time</label>
+                <input type="text" id="preparation_time" name="preparation_time" class="form-control" placeholder="preparation time">
+            </div>
+        </div>
+           
+        <div class="row">
+            <div class="col-lg-3 ">
+                <label >Difficulty</label>
+                <input type="number" id="difficulty" name="difficulty" class="form-control" placeholder=" out of 5">
+            </div>
+                
+            <div class="col-lg-3">
+                <label >Serves</label>
+                <input type="number" id="serves" name="serves" class="form-control" placeholder="serves how many">
+            </div>
+                
+            <div class="col-lg-3">
+                <label >cooking time</label>
+                <input type="text" id="cooking_time" name="cooking_time" class="form-control" placeholder="cooking time"></input>
+            </div>
+        </div>
+          
+        <div class="row">
         <div class="col-lg-3">
-            <label >category</label>
-          <select class="form-control" id="category" name="category_name">
-              <option value="" disabled selected>choose category</option>
-              {% for cat in categories %}
-              <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-              {% endfor %}
-          </select>
-        </div>
-        
-        <div class="col-lg-3  ">
-            <label >Recipe Title</label>
-          <input type="text" id="title" name="title" class="form-control" placeholder="Recipe Title">
-        </div>
-        
-         <div class="col-lg-3">
-            <label >preparation time</label>
-          <input type="text" id="preparation_time" name="preparation_time" class="form-control" placeholder="preparation time">
-        </div>
-        
-   </div>
-   
-   <div class="row">
-       
-        <div class="col-lg-3 ">
-        <label >Difficulty</label>
-      <input type="number" id="difficulty" name="difficulty" class="form-control" placeholder=" out of 5">
-    </div>
-    
-    <div class="col-lg-3">
-        <label >Serves</label>
-      <input type="number" id="serves" name="serves" class="form-control" placeholder="serves how many">
-    </div>
-    
-    <div class="col-lg-3">
-            <label >cooking time</label>
-          <input type="text" id="cooking_time" name="cooking_time" class="form-control" placeholder="cooking time"></input>
-        </div>
-    
-    
-  </div>
-  
-  <div class="row">
-      
-      <div class="col-lg-3">
-        <label >Ingredients</label>
-        <textarea type="text" id="ingredients" name="ingredients" class="form-control" placeholder="Please use a new line for each new ingredient as it will make it easier to read. Thank you"></textarea>
-    </div>
-    
-    <div class="col-lg-3">
-        <label >Instructions</label>
-        <textarea type="text" id="cooking_instructions" name="cooking_instructions" class="form-control" placeholder="Please end each instruction with # in order to display the steps correctly.Thank you "></textarea>
-    </div>
-    
-     <div class="col-lg-6">
-            <label >Description</label>
-            <textarea type="text" id="description" name="description" class="form-control" placeholder="Description"></textarea>
-        </div>
-  </div>
-  
-  
-  
-  
-  
-      <div class="form-check">
-        
+                <label >Ingredients</label>
+                <textarea type="text" id="ingredients" name="ingredients" class="form-control" placeholder="Please use a new line for each new ingredient as it will make it easier to read. Thank you"></textarea>
+            </div>
+                
+            <div class="col-lg-3">
+                <label >Instructions</label>
+                <textarea type="text" id="cooking_instructions" name="cooking_instructions" class="form-control" placeholder="Please end each instruction with # in order to display the steps correctly.Thank you "></textarea>
+            </div>
+                
+            <div class="col-lg-6">
+                <label >Description</label>
+                <textarea type="text" id="description" name="description" class="form-control" placeholder="Description"></textarea>
+            </div>
+         </div>
+          
+          
+        <div class="form-check">
             <input type="checkbox" class="slider" id="add_favourite" name="add_favourite">
             <label class="form-check-label" for="exampleCheck1">Add to Favourites</label>
-       
-      </div>
-  
-  <div>
-      <button type="submit"  class="btn btn-primary">Submit</button>
-     
-  </div>
-  
-</form>
-
+        </div>
+          
+        <div>
+            <button type="submit"  class="btn btn-primary">Submit</button>
+            </div>
+    </form>
 </div>
-
-
-
-
     
 {% endblock %}

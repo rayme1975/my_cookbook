@@ -4,88 +4,86 @@
     
     
    
-  <div class="row">
+<div class="row">
    
-   <!-- Recipes -->
+<!-- Recipes -->
    <div class="recipe_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
-     <div class="overlay content">
-     <a href="/list_recipes">
-      <p>Recipes</p>
-      <div class="item-description">
-        <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div></a>
-    </div>
+      <div class="overlay content">
+         <a href="/list_recipes">
+            <p>Recipes</p>
+            <div class="item-description">
+                <p>Feel free to browse through a vast array of Recipes</p>
+            </div>
+         </a>
+      </div>
    </div>
+   
    <div class="d-lg-none d-sm-block d-none d-sm-none d-md-block homepage-item">
-     <p>Recipes</p>
-    </div>
-     
-     
- <!-- Favourites -->
-      <div class="favourite_pic pic_parameters col-lg-3 container img-thumbnail" >
+      <p>Recipes</p>
+   </div>
+        
+        
+   <!-- Favourites -->
+   <div class="favourite_pic pic_parameters col-lg-3 container img-thumbnail" >
       <div class="content">
-       <a href="/show_favourites">
-       <p>Favourites</p>
-       <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div>
-  </div>
-   </a>
+         <a href="/show_favourites">
+            <p>Favourites</p>
+            <div class="item-description">
+                <p>Here you can view a list of your favourite Recipes</p>
+            </div>
+         </a>
       </div>
+        
+   </div>
+        
+         
+         
+    <!-- Categories -->
      
-      
-      
- <!-- Categories -->
-  
-     <div class="categories_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
+   <div class="categories_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
       <div class="overlay content">
-       <a href="/list_categories">
-    <p>Categories</p>
-    <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div>
-    </a>
-  </div>
+         <a href="/list_categories">
+            <p>Categories</p>
+            <div class="item-description">
+                <p>Choose from Thai, Indian, Italian Food. A list of mouthwatering desserts or refreshing smoothies or cocktails, alcohol optional of course!</p>
+            </div>
+         </a>
       </div>
-      
-     
-      
-      <!-- Add Recipe -->
-      <div class="add_recipe_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
+   </div>
+         
+        
+         
+   <!-- Add Recipe -->
+   
+   <div class="add_recipe_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
       <div class="overlay content">
-       <a href="/add_recipe">
-       <p>Add Recipe</p>
-    <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div></a>
-  </div>
-     </div>
-     
-       
-    </div>
+         <a href="/add_recipe">
+            <p>Add Recipe</p>
+            <div class="item-description">
+               <p>You can name your recipe, give prep & cook times, put an eye-catching description, list the ingredients & directions, and offer the time the recipe will be ready in, how many servings the recipe makes, and how much the recipe yields</p>
+            </div>
+         </a>
+      </div>
+   </div>
+   
+</div>
     
    
   
 
-    {% for favourite in favourites %}
+{% for favourite in favourites %}
     
-    <div class="container">
-        <div class="row">
-             <div class=" col-md-4 ">
-                <h3><a href="{{url_for('show_recipe', recipe_id=favourite._id)}}">{{favourite.title}}</a></h3>
-            </div>  
-            <div class=" col-md-8 ">
-                <p class="desc">{{favourite.description}}</p>
-                
-                <hr>
-                
-            </div>
-            
-            
-            
-        </div>
-    </div>
-
+<div class="container">
+   <div class="row">
+      <div class=" col-md-4 ">
+         <h3><a href="{{url_for('show_recipe', recipe_id=favourite._id)}}">{{favourite.title}}</a></h3>
+      </div>  
+      <div class=" col-md-8 ">
+         <p class="desc">{{favourite.description}}</p>
+         <hr>
+      </div>
+   </div>
+</div>
 
 {% endfor %}
- {% endblock%}
+{% endblock%}

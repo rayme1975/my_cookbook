@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        
+         <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        
+         <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- fontawesome -->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        
+        <!-- local stylesheet -->
+        <link rel="stylesheet" href="/static/style/style.css" type="text/css" />
+        
+    </head>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    
-    <!-- local stylesheet -->
-    <link rel="stylesheet" href="/static/style/style.css" type="text/css" />
-    
-</head>
-
-<body>
-    
-        <div class="jumbotron container">
-       
-            
-          <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-bottom">
-              <a class="navbar-brand"  href="/home_page">My CookBook</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <body>
+    <!-- nav menu for mobile format(smartphone/tablet) -->
+    <div class="jumbotron container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-bottom">
+            <a class="navbar-brand"  href="/home_page">My CookBook</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="nav navbar-nav navbar-right d-lg-none">
+            </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="nav navbar-nav navbar-right d-lg-none">
                 <li class="nav-item"><a href="/list_recipes">Recipes</a></li>
-                 <li class="nav-item"><a href="/show_favourites">Favourites</a></li>
+                <li class="nav-item"><a href="/show_favourites">Favourites</a></li>
                 <li class="nav-item"><a href="/list_categories">Categories</a></li>
                 <li class="nav-item"><a href="/add_recipe">Add Recipe</a></li>
-              </ul>
-                
-              </div>
-          </nav>
-    
-</nav> 
-
-</div>
+            </ul>
+        </div>
+        </nav>
+    </div>
 
 
 
@@ -58,16 +52,17 @@
     {% block content %}
         {% endblock %}
         
-  
+  <!-- jquery libraries -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-   <script>
    
-      function myPrint() {
-        window.print();
-      }
-      
+   <!-- bootstrap javascript libraries -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+   <!-- materialize javascript libraries -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   
+   
+   <script>
       
       /* validation function to stop entering empty field forms - start */ 
       function validateForm(){
@@ -130,6 +125,7 @@
       
       /* validation function to stop entering empty field forms - end */ 
       
+      /* function for switch between tabs on mobile version - start */
       
       function openTab(event, tabName) {
       var i, tabcontent, tablinks;
@@ -144,15 +140,14 @@
       document.getElementById(tabName).style.display = "block";
       event.currentTarget.className += " active";
     }
-      
+    
+    /* function for switch between tabs on mobile version - end */
      
-            
-        
 
   
       </script>
     
-</body>
+    </body>
 
     
 </html>

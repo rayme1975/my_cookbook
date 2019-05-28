@@ -3,151 +3,123 @@
     {% block content %}
     
     
-    <div class="row">
-        
-   <!-- Recipes -->
-   <div class="recipe_pic pic_parameters col-lg-3 container img-thumbnail" >
-     <div class="content">
-     <a href="/list_recipes">
-      <p>{{recipe.title}}</p>
-      <div class="item-description">
-        <p>{{recipe.description}}</p>
-    </div></a>
+<div class="row">
+
+    <!-- Recipes -->
+    <div class="recipe_pic pic_parameters col-lg-3 container img-thumbnail" >
+        <div class="content">
+            <a href="/list_recipes">
+                <p>{{recipe.title}}</p>
+                <div class="item-description">
+                    <p>{{recipe.description}}</p>
+                </div>
+            </a>
+        </div>
     </div>
-   </div>
-   
-     
-     
- <!-- Favourites -->
-      <div class="favourite_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block  container" >
-      <div class="overlay content">
-       <a href="/show_favourites">
-       <p>Favourites</p>
-       <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div>
-  </div>
-   </a>
-      </div>
-      
-      
-      
- <!-- Categories -->
-  
-     <div class="categories_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block   container" >
-      <div class="overlay content">
-       <a href="/list_categories">
-    <p>Categories</p>
-    <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div>
-    </a>
-  </div>
-      </div>
-     
-     
-      
-      <!-- Add Recipe -->
-      <div class="add_recipe_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
-      <div class="overlay content">
-       <a href="/add_recipe">
-       <p>Add Recipe</p>
-    <div class="item-description">
-    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
-    </div></a>
-  </div>
-     </div>
-     
-      
        
+         
+         
+    <!-- Favourites -->
+    <div class="favourite_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block  container" >
+        <div class="overlay content">
+            <a href="/show_favourites">
+                <p>Favourites</p>
+                <div class="item-description">
+                     <p>Here you can view a list of your favourite Recipes</p>
+                </div>
+            </div>
+            </a>
     </div>
+          
+          
+          
+     <!-- Categories -->
+    <div class="categories_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block   container" >
+        <div class="overlay content">
+            <a href="/list_categories">
+                <p>Categories</p>
+                <div class="item-description">
+                     <p>Choose from Thai, Indian, Italian Food. A list of mouthwatering desserts or refreshing smoothies or cocktails, alcohol optional of course!</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Add Recipe -->
+    <div class="add_recipe_pic pic_parameters col-lg-3 d-none d-lg-block d-xl-none d-lg-none d-xl-block container" >
+        <div class="overlay content">
+            <a href="/add_recipe">
+                <p>Add Recipe</p>
+                <div class="item-description">
+                    <p>You can name your recipe, give prep & cook times, put an eye-catching description, list the ingredients & directions, and offer the time the recipe will be ready in, how many servings the recipe makes, and how much the recipe yields</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
     
 <div class="">
     
     <div class="row">
         <div class="col-lg-12 edit-trash-email ">
-            
-                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
-                <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." class="desc icon-size cooking-time"data-toggle="tooltip" data-placement="top" title="email" title="Email"><i class="fa fa-envelope"></i></a>
-            
-                <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Serves"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
-                <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Difficulty"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
-                
-       </div>
-       </div>
-       
-        <div class="row">
-        <div class="col-lg-12 edit-trash-email ">
-                <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="prep and cook time" ><i class="far fa-clock"></i></span>
-                <span Prep class="cooking-time">Prep: {{recipe.preparation_time}}</span>
-                <span class="cooking-time">Cook: {{recipe.cooking_time}}</span>
-                
+            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" onclick="deleteRecipe()" id="trash" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+            <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." class="desc icon-size cooking-time"data-toggle="tooltip" data-placement="top" title="email" title="Email"><i class="fa fa-envelope"></i></a>
+            <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Serves"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
+            <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Difficulty"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
         </div>
-       </div>
-       
-       
-       
     </div>
+       
+    <div class="row">
+        <div class="col-lg-12 edit-trash-email ">
+            <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="prep and cook time" ><i class="far fa-clock"></i></span>
+            <span Prep class="cooking-time">Prep: {{recipe.preparation_time}}</span>
+            <span class="cooking-time">Cook: {{recipe.cooking_time}}</span>
+        </div>
+    </div>
+       
+</div>
 
 <div class="container">
-        <div class="row d-block d-sm-none">
-            <div class="tab">
-              <button class="tablinks" onclick="openTab(event, 'ingredients')">Ingredients</button>
-              <button class="tablinks" onclick="openTab(event, 'instructions')">Instructions</button>
-            </div>
+    <!-- classes row d-block d-sm-none used to display only during mobile -->
+    <div class="row d-block d-sm-none">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'ingredients')">Ingredients</button>
+            <button class="tablinks" onclick="openTab(event, 'instructions')">Instructions</button>
         </div>
-        
-        <div class="row">
+    </div>
             
-            <div class="col-md-6 ingredient-style tabcontent" id="ingredients">
-          <!--  <h1>Ingredients</h1> -->
-          
-          <table class="table table-striped">
-          <thead>
-            <tr>
-             <th scope="col"><h3>Ingredients</h3></th>
-            </tr>
-          </thead>
-           <tbody>
-               <!-- seperate ingredients with new line using splitlines() -->
-                {% for ingredient  in recipe.ingredients.splitlines() %}
-            <tr>
-              <td>{{ingredient}}</td>
-            </tr> 
-            
-             {% endfor %}
-           </tbody>
-        </table>
+    <div class="row">
+        <div class="col-md-6 ingredient-style tabcontent" id="ingredients">
+            <!--  <h1>Ingredients</h1> -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col"><h3>Ingredients</h3></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- seperate ingredients with new line using splitlines() -->
+                    {% for ingredient  in recipe.ingredients.splitlines() %}
+                    <tr>
+                    <td>{{ingredient}}</td>
+                    </tr> 
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
-      
-            
-             <div class="col-md-6 ingredient-style tabcontent" id="instructions">
-                 
-                 
+              
+                    
+        <div class="col-md-6 ingredient-style tabcontent" id="instructions">
             <h3>cooking instructions</h3>
             <ol> 
-              <!-- seperate cooking instruction with new line using split() with a delimiter of ('.') , user will have to be informed that each instruction has to end with a period -->
-              {% for instruction in recipe.cooking_instructions.split('#') %}
-              <li>{{instruction}}</li>
-              
-             
-              
-              {% endfor %}
+                <!-- seperate cooking instruction with new line using split() with a delimiter of ('.') , user will have to be informed that each instruction has to end with a period -->
+                {% for instruction in recipe.cooking_instructions.split('#') %}
+                <li>{{instruction}}</li>
+                {% endfor %}
             </ol> 
         </div>
-        
-        </div>
-          
-     
-    </div> 
-
-    
-
-
-
-
-        
-
+    </div>
+</div> 
 {% endblock %}
