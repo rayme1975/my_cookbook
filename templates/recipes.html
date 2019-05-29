@@ -65,7 +65,7 @@
         <div class="col-lg-12 edit-trash-email ">
             <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
             <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" onclick="deleteRecipe()" id="trash" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
-            <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe http://my-cookbook-raycrowley.c9users.io/show_recipe/{{recipe._id}}." class="desc icon-size cooking-time"data-toggle="tooltip" data-placement="top" title="email" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe https://mycook-book.herokuapp.com/show_recipe/{{recipe._id}}." class="desc icon-size cooking-time"data-toggle="tooltip" data-placement="top" title="email" title="Email"><i class="fa fa-envelope"></i></a>
             <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Serves"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
             <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Difficulty"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
         </div>

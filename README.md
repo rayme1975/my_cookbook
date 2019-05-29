@@ -20,11 +20,9 @@ This section is also where you would share links to any wireframes, mockups, dia
 ### Existing Features
 - Feature 1 - allows users Create a custom Recipe of there choice by filling out the form which is located under Add Recipe link. This is located on the far right hand side on the home page. For mobile view(smartphone), the same link can be located in the drop downmenu or by scrolling to the bottom of the screen
 
-![Alt dropdown](images/select_team.png "Dashboard")
+![Alt Edit Menu](static/images/edit_menu.png "Dashboard")
 
-- Feature 2 - allows to add a Recipe to their Favourite list which is achieved by ticking the
-### Add to favourites
-checkbox under the edit recipe option. 
+- Feature 2 - allows to add a Recipe to their Favourite list which is achieved by ticking the Add to favourites checkbox under the edit recipe option. 
 
 ![Alt dropdown](images/select_team.png "Dashboard")
 
