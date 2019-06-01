@@ -114,8 +114,8 @@ In addition, you should mention in this section how your project looks and works
 ![Alt firefox](/static/images/firefox.png "firefox homepage")
 
 
-- Homepage viewed on iphone - Recipe page viewed on Galaxy S5 - Recipe page viewed on iphone
-![Alt mobile](/static/images/iphone678.png "iphone homepage") ![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page") ![Alt mobile](/static/images/iphone678_recipe.png "iphone Recipe page")
+- Homepage viewed on iphone - Recipe page viewed on iphone - Homepage viewed on Galaxy S5 - Recipe page viewed on Galaxy S5 
+![Alt mobile](/static/images/iphone678.png "iphone homepage") ![Alt mobile](/static/images/iphone678_recipe.png "iphone Recipe page") ![Alt mobile](/static/images/homepage_S5.png "Galaxy S5 homepage") ![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page")
 
 
 - Homepage viewed on ipad 
