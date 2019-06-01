@@ -20,21 +20,27 @@ This section is also where you would share links to any wireframes, mockups, dia
 ### Existing Features
 - Feature 1 - allows users Create a custom Recipe of there choice by filling out the form which is located under Add Recipe link. This is located on the far right hand side on the home page. For mobile view(smartphone), the same link can be located in the drop downmenu or by scrolling to the bottom of the screen
 
-![Alt Edit Menu](static/images/edit_menu.png "Dashboard")
+![Alt Main Menu](/static/images/edit_menu.png "Homepage")
 
-- Feature 2 - allows to add a Recipe to their Favourite list which is achieved by ticking the Add to favourites checkbox under the edit recipe option. 
+![Alt Edit Form](/static/images/Add_Recipe_form.png "Add Recipe")
 
-![Alt dropdown](images/select_team.png "Dashboard")
+- Feature 2 - allows to add a Recipe to their Favourite list which is achieved by ticking the Add to favourites checkbox under the Add recipe option. 
+
+![Alt Add to  Favourite](/static/images/Add_to_favourites.png "Add to Favourites")
 
 - Feature 3 - allows users to email a recipe to a friend or collegue by clicking on the email option  which is available on the Recipe page
 
-![Alt dropdown](images/select_team.png "Dashboard")
+![Alt email link](/static/images/email_link.png "Email Recipe")
+
+- This will open your current email client as seen below. The link for the recipe will be in the body of the email.
+
+![Alt email client](/static/images/email_client.png "Email client")
 
 - Feature 4 - allows users to edit any recipe by clicking on the edit button located on the Recipe page
-- 
-![Alt dropdown](images/select_team.png "Dashboard")
 
+![Alt email client](/static/images/edit_recipe_link.png "Email client")
 
+- This will open your current the edit form with all the recipe fields populates. The user can then make changes and then resubmit are cancel if required.
 
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
@@ -44,13 +50,22 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Features Left to Implement
 
 - Future features may have included a user login option for the purpose of rating or reviewing recipes.
+- Pagination as lists may become very long to scroll through.
+- Search bar
 
 ## Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+     - I used ***FontAwesome*** in this project to manipulate the DOM. example, drop down menu for mobile devices
+
+- [Fontawesome](https://fontawesome.com/)
+    - I used ***FontAwesome*** in this project to style buttons, fonts and buttons.
+
+- [Bootstrap](https://getbootstrap.com/)
+    - I used ***Bootstrap*** in this project as the main framework that set the look and feel of the website and helped me to modify it for mobile application.
+    
 
 
 ## Testing
@@ -68,6 +83,44 @@ For any scenarios that have not been automated, test the user stories manually a
     4. Try to submit the form with all inputs valid and verify that a success message appears.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+- Below are a few samples of how the site displayed on different browsers and devices
+
+![Alt chrome](/static/images/chrome.png "chrome homepage")
+
+- Homepage viewed on Chrome browser
+
+![Alt expolrer](/static/images/explorer.png "explorer homepage")
+
+- Homepage viewed on Explorer browser
+
+![Alt opera](/static/images/opera.png "opera homepage")
+
+- Homepage viewed on Opera browser
+
+![Alt firefox](/static/images/firefox.png "firefox homepage")
+
+- Homepage viewed on Firerox browser
+
+![Alt mobile](/static/images/iphone678.png "iphone homepage")
+
+- Homepage viewed on iphone6/7/8 
+
+![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page")
+
+- Homepage viewed on Galaxy S5
+
+![Alt mobile](/static/images/iphone678.png "iphone Recipe page")
+
+- Recipe page viewed on iphone6/7/8 
+
+![Alt ipad](/static/images/ipad.png "ipad homepage")
+
+- Homepage viewed on ipad browser
+
+- This will open your current the edit form with all the recipe fields populates. The user can then make changes and then resubmit are cancel if required.
+
+
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 

@@ -101,7 +101,56 @@
       </div>
     </div>
     
+    <div>
+        <div class="radio">
+          <label><input type="radio" id="allCategories" value="all" name="categories">All Categories</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" id="myThai" value="thai" name="categories">Thai</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" id="myItalian" value="italian" name="categories">Italian</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" id="myIndian" value="indian" name="categories">Indian</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" id="myDesserts" value="desserts" name="categories">Desserts</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" id="mySmoothies" value="smoothies" name="categories">Smoothies</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" id="myCocktails" value="cocktails" name="categories">Cocktails</label>
+        </div>
+        
+        <button onclick="selectCategory()" >Search</button>
+        
+    </div>
 
+   
+
+    <p id="demo"></p>
+    
+    
+    
+    <div>
+        <h4>Desserts</h4>
+        {% for recipe in recipes %}
+            {% if recipe.category_name ==  "desserts"  %}
+        <ul>
+            <h4 id="demo"><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}">{{recipe.title}}</a></h4>
+        </ul>
+            {% endif %}
+        {% endfor%}
+    </div>    
+         
+        
+        
+        
+        
+   
+   
     
     
      
