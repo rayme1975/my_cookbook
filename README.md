@@ -11,9 +11,22 @@ Create, Update and Delete recipes as they wish. This is done through a user frie
  
 This website will appeal to users who have an interest in home cooking or baking.
 
+***Below are a sample of wireframe mockups that the site was modelled on. The final version may differ to the initial layout.***
+
+- Homepage and Recipe list ***Desktop*** and ***Mobile*** view
+
+![Alt homepage/Recipe list](/static/images/homepage_desktop_mobile.png "Desktop/Mobile")
+
+- Recipe view page ***Desktop*** 
+
+![Alt Recipe page](/static/images/recipe_page_desktop.png "Desktop")
+
+- Recipe view page ***Mobile*** 
+
+![Alt Recipe page](/static/images/recipe_page_mobile.png "Mobile")
 
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+
 
 ## Features
  
@@ -42,10 +55,8 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 - This will open your current the edit form with all the recipe fields populates. The user can then make changes and then resubmit are cancel if required.
 
+![Alt email client](/static/images/edit_recipe_form.png "Email client")
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
 
@@ -86,37 +97,39 @@ In addition, you should mention in this section how your project looks and works
 
 - Below are a few samples of how the site displayed on different browsers and devices
 
-![Alt chrome](/static/images/chrome.png "chrome homepage")
 
 - Homepage viewed on Chrome browser
+![Alt chrome](/static/images/chrome.png "chrome homepage")
 
-![Alt expolrer](/static/images/explorer.png "explorer homepage")
 
 - Homepage viewed on Explorer browser
+![Alt expolrer](/static/images/explorer.png "explorer homepage")
 
-![Alt opera](/static/images/opera.png "opera homepage")
 
 - Homepage viewed on Opera browser
+![Alt opera](/static/images/opera.png "opera homepage")
 
-![Alt firefox](/static/images/firefox.png "firefox homepage")
 
 - Homepage viewed on Firerox browser
+![Alt firefox](/static/images/firefox.png "firefox homepage")
 
-![Alt mobile](/static/images/iphone678.png "iphone homepage")
 
 - Homepage viewed on iphone6/7/8 
+![Alt mobile](/static/images/iphone678.png "iphone homepage")
 
-![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page")
 
 - Homepage viewed on Galaxy S5
+![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page")
 
+
+- Recipe page viewed on iphone6/7/8
 ![Alt mobile](/static/images/iphone678.png "iphone Recipe page")
 
-- Recipe page viewed on iphone6/7/8 
-
-![Alt ipad](/static/images/ipad.png "ipad homepage")
 
 - Homepage viewed on ipad browser
+![Alt ipad](/static/images/ipad.png "ipad homepage")
+
+
 
 - This will open your current the edit form with all the recipe fields populates. The user can then make changes and then resubmit are cancel if required.
 

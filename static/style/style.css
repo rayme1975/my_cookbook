@@ -310,8 +310,6 @@ h4 a{
     padding: 0;
     font-weight: 100;
   }
-  
-
 
 
 hr {
@@ -345,15 +343,6 @@ div {
     margin-bottom: 15px;
 }
 
-.direction {
-  background-color: #2e9fb3;
-    color: white;
-    width: 80px;
-    height: 30px;
-    display: inline-block;
-    border-style: none;
-    
-}
 
 /* Bootstrap modified code - start */
 
@@ -364,10 +353,21 @@ div {
     background-color: transparent;
 }
 
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+
 .navbar-brand {
     padding: 17px 34px;
-    margin-top: -15px;
-}
+    margin-top: -34px;
+} 
     
 
 .container-fluid {
