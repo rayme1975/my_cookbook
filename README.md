@@ -114,16 +114,8 @@ In addition, you should mention in this section how your project looks and works
 ![Alt firefox](/static/images/firefox.png "firefox homepage")
 
 
-- Homepage viewed on iphone6/7/8 
-![Alt mobile](/static/images/iphone678.png "iphone homepage") ![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page") ![Alt mobile](/static/images/iphone678.png "iphone Recipe page")
 
-
-- Homepage viewed on Galaxy S5
-![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page")
-
-
-- Recipe page viewed on iphone6/7/8
-![Alt mobile](/static/images/iphone678.png "iphone Recipe page")
+![Alt mobile](/static/images/iphone678.png "iphone homepage") ![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page") ![Alt mobile](/static/images/iphone678.png "iphone Recipe page") ![Alt mobile](/static/images/iphone678.png "iphone Recipe page")
 
 
 - Homepage viewed on ipad browser
