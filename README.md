@@ -147,7 +147,7 @@ For any scenarios that have not been automated, test the user stories manually a
 ![Alt firefox](/static/images/firefox.png "firefox homepage")
 
 
-- Homepage viewed on iphone - Recipe page viewed on iphone - Homepage viewed on Galaxy S5 
+- A sample of view from various different mobile devices
 ![Alt mobile](/static/images/iphone678.png "iphone homepage") ![Alt mobile](/static/images/iphone678_recipe.png "iphone Recipe page") ![Alt mobile](/static/images/homepage_S5.png "Galaxy S5 homepage") 
 
 
