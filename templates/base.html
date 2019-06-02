@@ -88,7 +88,7 @@
           
         var number2 = document.getElementById('serves').value; 
          // If number is Not a Number or less than one or greater than 5
-        if (isNaN(number2) || number2 < 1 || number2 > 5) {
+        if (isNaN(number2) || number2 < 1) {
           document.getElementById('serves').focus();
           document.getElementById('serves').style.borderColor ="red";
           return false;
@@ -117,14 +117,14 @@
         // Check to make sure textarea is not blank
         if(document.getElementById('ingredients').value == ""){
          document.getElementById('ingredients').focus();
-         document.getElementById("ingredients").innerHTML = "Please enter a list of ingredients";
+         document.getElementById("ingredients").placeholder = "Please enter a list of ingredients";
          document.getElementById('ingredients').style.borderColor ="red";
          return false;
         }
         // Check to make sure input is not blank
         if(document.getElementById('cooking_instructions').value == ""){
          document.getElementById('cooking_instructions').focus();
-         document.getElementById("cooking_instructions").innerHTML = "Please enter cooking instructions";
+         document.getElementById("cooking_instructions").placeholder = "Please enter cooking instructions";
          document.getElementById('cooking_instructions').style.borderColor ="red";
          return false;
         }
@@ -163,6 +163,14 @@
         document.getElementById("demo").innerHTML = italianFood;
         
     }
+    
+    function getSelectedCategory(){
+            
+            var selectedCategory = document.getElementById("list").value;
+            
+            document.getElementById("test").innerHTML = selectedCategory;
+            
+        }
      
 
   
