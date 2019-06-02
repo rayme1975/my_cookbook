@@ -71,53 +71,60 @@
         
         if(document.getElementById('title').value == ""){
          document.getElementById('title').focus();
-         document.getElementById("title").innerHTML = "Please enter a title";
+         document.getElementById("title").placeholder = "Please enter a title";
          document.getElementById('title').style.borderColor ="red";
          return false;
         }
 
       
-       var number = document.getElementById('difficulty').value ;
+       var number = document.getElementById('difficulty').value;
 
         // If number is Not a Number or less than one or greater than 5
         if (isNaN(number) || number < 1 || number > 5) {
           document.getElementById('difficulty').focus();
-          document.getElementById("difficulty").innerHTML = "testing";
           document.getElementById('difficulty').style.borderColor ="red";
           return false;
           } 
           
+        var number2 = document.getElementById('serves').value; 
+         // If number is Not a Number or less than one or greater than 5
+        if (isNaN(number2) || number2 < 1 || number2 > 5) {
+          document.getElementById('serves').focus();
+          document.getElementById('serves').style.borderColor ="red";
+          return false;
+          }
+          // Check to make sure input is not blank
         if(document.getElementById('preparation_time').value == ""){
          document.getElementById('preparation_time').focus();
-         document.getElementById("preparation_time").innerHTML = "Please enter a title";
+         document.getElementById("preparation_time").placeholder = "Please enter a preparation time";
          document.getElementById('preparation_time').style.borderColor ="red";
          return false;
         }
-        
+        // Check to make sure input is not blank
         if(document.getElementById('cooking_time').value == ""){
          document.getElementById('cooking_time').focus();
-         document.getElementById("cooking_time").innerHTML = "Please enter a title";
+         document.getElementById("cooking_time").placeholder = "Please enter a cooking time";
          document.getElementById('cooking_time').style.borderColor ="red";
          return false;
         }
-        
+        // Check to make sure textarea is not blank
         if(document.getElementById('description').value == ""){
          document.getElementById('description').focus();
-         document.getElementById("description").innerHTML = "Please enter a title";
+         document.getElementById("description").placeholder = "Please enter a description";
          document.getElementById('description').style.borderColor ="red";
          return false;
         }
-        
+        // Check to make sure textarea is not blank
         if(document.getElementById('ingredients').value == ""){
          document.getElementById('ingredients').focus();
-         document.getElementById("ingredients").innerHTML = "Please enter a title";
+         document.getElementById("ingredients").innerHTML = "Please enter a list of ingredients";
          document.getElementById('ingredients').style.borderColor ="red";
          return false;
         }
-        
+        // Check to make sure input is not blank
         if(document.getElementById('cooking_instructions').value == ""){
          document.getElementById('cooking_instructions').focus();
-         document.getElementById("cooking_instructions").innerHTML = "Please enter a title";
+         document.getElementById("cooking_instructions").innerHTML = "Please enter cooking instructions";
          document.getElementById('cooking_instructions').style.borderColor ="red";
          return false;
         }
