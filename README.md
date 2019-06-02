@@ -151,7 +151,7 @@ For any scenarios that have not been automated, test the user stories manually a
 ![Alt mobile](/static/images/iphone678.png "iphone homepage") ![Alt mobile](/static/images/iphone678_recipe.png "iphone Recipe page") ![Alt mobile](/static/images/homepage_S5.png "Galaxy S5 homepage") 
 
 
-- Recipe page viewed on Galaxy S5 - Homepage viewed on ipad 
+
 ![Alt mobile](/static/images/galaxys5.png "Galaxy S5 Recipe page") ![Alt ipad](/static/images/ipad.png "ipad homepage")
 
 
