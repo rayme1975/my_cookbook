@@ -13,15 +13,7 @@ recipe-description{
   color: white;
 }
 
-.thai_pic {
-  background-image: url("/static/images/thai.jpg");
-  height: 180px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
+/* background pictures for navagation - start */
 .favourite_pic {
   background-image: url("/static/images/brooke-lark-230140-unsplash.jpg");
 }
@@ -45,6 +37,12 @@ recipe-description{
   background-size: cover;
 }
 
+/* background pictures for navagation - end */
+
+
+.search_button{
+  margin-top: 20px;
+}
 
 .item-description{
      padding-top: 0px;
@@ -78,6 +76,14 @@ p {
   color: black;
 }
 
+/* recipe page configuration - start */
+
+.recipe-details-container {
+    padding: 0 .625rem;
+    background-color: #fcf4ec;
+    margin-bottom: 35px;
+}
+
 .prep {
   padding-top: 5px;
   display: inline-block;
@@ -102,6 +108,8 @@ p {
   font-family: monospace;
 }
 
+/* recipe page configuration - end */
+
 img {
   position: relative;
   left: 0px;
@@ -109,11 +117,12 @@ img {
   z-index: -1;
 }
 
-.cooking
 
 .navbar-fixed-top {
     position: relative;
 }
+
+/* link and list configurations - start */
 
 a {
     color: white;
@@ -126,31 +135,23 @@ a:hover{
 }
 
 
+ul li {
+  list-style-type: none;
+   
+}
+
 li a{
   color: black;;
   text-decoration: none;
 }
 
 li a:hover{
-  color: black;;
+  color: black;
   text-decoration: none;
 }
 
-.favourite{
-  color: orange;
-}
+/* link and list configurations - end */
 
-.checked:hover{
-  color: orange;
-}
-
-.select-delete:hover{
-  color: red;
-}
-
-.select-edit:hover{
-  color: blue;
-}
 
 .responsive {
     
@@ -160,11 +161,8 @@ li a:hover{
     height: 100%;
 }
 
-.recipe-details-container {
-    padding: 0 .625rem;
-    background-color: #fcf4ec;
-    margin-bottom: 35px;
-}
+
+/* fontawesome button configuration - start */
 
 .fa {
   display: inherit;
@@ -229,6 +227,8 @@ li a:hover{
   float: left;
 }
 
+/* fontawesome button configuration - end */
+
   
 .myMenuItems-banner {
   font-family: "Roboto", Times, serif;
@@ -243,6 +243,8 @@ li a:hover{
   font-weight: bold;
   color: #4CAF50;
 }
+
+/* header configurations - start */
 
 h1 {
     text-align: center;
@@ -277,13 +279,6 @@ h2{
   text-transform:  capitalize;
 }
 
-@media only screen and (max-width: 749px){
-h2 {
-    
-    font-size: 3.4rem;
-    line-height: 1.23529;
-}
-}
 
 h3 a {
     font-family: "Ek Mukta", Times, serif;
@@ -310,7 +305,11 @@ h4 a{
     padding: 0;
     font-weight: 100;
   }
+  
+/* header configurations - start */
 
+
+/* hr and navbar configurations - start */
 
 hr {
       width: 65%;
@@ -318,25 +317,21 @@ hr {
     background-color: #d9edf7;
 }
 
-ul li {
-  list-style-type: none;
-   
-}
 
 .wrapper{
   background-color: grey;
 }
 
-
-
 .navbar-default {
     background-color: white;
-    z-index: 1;
+    
 }
 
 .navbar-default .navbar-nav>li>a {
     color: #2e9fb3;
 }
+
+/* hr and navbar configurations - end */
 
 div {
     text-align: center;
@@ -472,13 +467,10 @@ ol>li{
 }
 
 
-
-
-
 /* Bootstrap modified code - end */
 
 
-/* W3schools side navbar modified code to suit this project - start */
+/* W3schools hover effect  modified code to suit this project - start */
 
 
 .container-style {
@@ -538,7 +530,7 @@ ul{
   list-style-type:none; 
 }
 
-/* W3schools side navbar modified code to suit this project - end */
+/* W3schools hover effect  modified code to suit this project - end */
 
 
 /* Extra small devices (phones, 600px and down) */

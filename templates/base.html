@@ -150,27 +150,14 @@
     
     /* function for switch between tabs on mobile version - end */
     
-    function selectCategory() {
-        var thaiFood;
-        var italianFood;
-        
-        
-        thaiFood = document.getElementById("myThai").value;
-        italianFood = document.getElementById("myItalian").value;
-        
-        
-        document.getElementById("demo").innerHTML = thaiFood;
-        document.getElementById("demo").innerHTML = italianFood;
-        
-    }
     
-    function getSelectedCategory(){
-            
-            var selectedCategory = document.getElementById("list").value;
-            
-            document.getElementById("test").innerHTML = selectedCategory;
+    /* function to select categories - start */
+    function selectMyCat()
+        {
+            location.href='/list_categories?selection='+document.getElementById("list").value;
             
         }
+    /* function to select categories - end */
      
 
   
