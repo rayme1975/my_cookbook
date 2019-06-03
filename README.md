@@ -152,15 +152,16 @@ The following checks were performed manually to ensure the site was n good worki
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
 
 
+For this project I had to deploy code to 2 different hosting platforms
 
+- Github pages for Repositories
+- Heroku for Hosting the site
+
+After every new development on the site I would save my work and proceed to upload the changes that I had made to both Platforms
+
+Both platforms have the exact same code deployed to them. The current number of commits stands at 73. Each commit represents a large or small adjust ments and is describe with a comment as to what was done.
 
 ## Credits
 

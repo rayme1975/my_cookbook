@@ -203,6 +203,11 @@ li a:hover{
   color: white;
 }
 
+.fa-chart-line {
+  background-color: #1d44da;
+  color: white;
+}
+
 .fa-clock {
   background: #1ddab8;
   color: white;

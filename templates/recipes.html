@@ -9,6 +9,9 @@
     <div class="recipe_pic pic_parameters col-lg-3 container img-thumbnail" >
         <div class="content">
             <a href="/list_recipes">
+                <div>
+                    <p>Recipes</p>
+                </div>
                 <p>{{recipe.title}}</p>
                 <div class="item-description">
                     <p>{{recipe.description}}</p>
@@ -67,7 +70,7 @@
             <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="desc icon-size cooking-time" onclick="deleteRecipe()" id="trash" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
             <a href="mailto:?subject={{recipe.title}}&amp;body=Check out this recipe https://mycook-book.herokuapp.com/show_recipe/{{recipe._id}}." class="desc icon-size cooking-time"data-toggle="tooltip" data-placement="top" title="email" title="Email"><i class="fa fa-envelope"></i></a>
             <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Serves"><i class="fas fa-utensils"></i>{{recipe.serves}}</span>
-            <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Difficulty"><i class="fas fa-utensils"></i>{{recipe.difficulty}}</span>
+            <span class="cooking-time" data-toggle="tooltip" data-placement="top" title="Difficulty"><i class="fas fa-chart-line"></i>{{recipe.difficulty}}</span>
         </div>
     </div>
        
