@@ -161,7 +161,7 @@ For this project I had to deploy code to 2 different hosting platforms
 
 After every new development on the site I would save my work and proceed to upload the changes that I had made to both Platforms
 
-Both platforms have the exact same code deployed to them. The current number of commits stands at 73. Each commit represents a large or small adjust ments and is describe with a comment as to what was done.
+Both platforms have the exact same code deployed to them. The current number of commits stands at 73. Each commit represents a large or small adjustments and is describe with a comment as to what was done.
 
 ## Credits
 
